@@ -1,5 +1,61 @@
 # Sunday, January 4, 2026
 
+## @banteg - AI Agent Worktrees Documentation
+> started documenting my agents workflows, starting from worktrees. will gradually expand on it. what else do you wish to know?
+
+- **Tweet:** https://x.com/banteg/status/2007410500859245029
+- **Link:** https://github.com/banteg/agents
+- **Filed:** [banteg-agents.md](./knowledge/tools/banteg-agents.md)
+- **What:** Documentation of git worktree workflows for AI agents, showing how to isolate agent work in separate directories to prevent conflicts.
+
+---
+
+## @alexhillman - Bookmark Gang Speed
+> bookmark gang does not fuck around 😂
+>
+> this is in less than 12 hrs.
+
+- **Tweet:** https://x.com/alexhillman/status/2007136609007968482
+- **What:** A lighthearted tweet celebrating the rapid pace at which the "bookmark gang" processes and archives Twitter bookmarks.
+
+---
+
+## @cloudxdev - Claude Code Universal Workflow Plugin
+> I have published whole agents, skills, commands, hooks files that I use as a "project-starter".
+>
+> Check it out
+
+- **Tweet:** https://x.com/cloudxdev/status/2006552219186008291
+- **Link:** https://github.com/CloudAI-X/claude-workflow-v2
+- **Filed:** [claude-workflow-v2.md](./knowledge/tools/claude-workflow-v2.md)
+- **What:** Universal Claude Code workflow plugin with 7 specialized AI agents, 6 skills, and 8 automation hooks that automatically selects the right agent for your task.
+
+---
+
+## @alexhillman - JFDI System Full Demo
+> Realizing that most people joining my lil ai exec assistant party haven't seen the full demo of the JFDI system that I built around Claude Code.
+>
+> Here's the initial walk-thru i recorded a couple of weeks back
+
+- **Tweet:** https://x.com/alexhillman/status/2005316274042089964
+- **Link:** https://www.youtube.com/watch?v=yjO9UHIunSE
+- **Filed:** [jfdi-system-claude-code-demo.md](./knowledge/videos/jfdi-system-claude-code-demo.md)
+- **What:** Demo video of the JFDI (Just F***ing Do It) system - an AI executive assistant built around Claude Code that Alex has been using exclusively from mobile.
+
+---
+
+## @hasantoxr - Grok Video-to-Skill Prompts
+> BREAKING: I stopped watching 2-hour YouTube tutorials.
+>
+> Grok now turns any video into a step-by-step skill plan.
+>
+> Here are 8 prompts that convert videos into mastery:
+
+- **Tweet:** https://x.com/hasantoxr/status/2006351230151585805
+- **What:** A tweet claiming Grok can convert long YouTube videos into step-by-step skill plans using 8 prompts, eliminating the need to watch full tutorials.
+
+---
+
 ## @Trisha_Techie - 9 Unknown Websites That Make Life Easier
 > These 9 Unknown Websites will make your life easier. ⤵️
 > 
