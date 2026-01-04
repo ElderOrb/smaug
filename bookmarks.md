@@ -1,5 +1,39 @@
 # Sunday, January 4, 2026
 
+## @nummanali - The Kraken has been Released
+> The Kraken has been Released
+>
+> Through CC Mirror:
+> - Claude Code Agent Orchestration
+> - Isolated from you main CC exec
+> - Packaged with Orchestration Skill
+> - You speak, it does anything you want
+>
+> Step 1:
+> npx cc-mirror quick --provider mirror --name mclaude
+>
+> Step 2:
+> mclaude
+>
+> Ask it to load the orchestration skill and to initiate
+
+> *Quoting @nummanali:* Claude Code - Official Multi Agent Orchestration
+>
+> This is a disabled feature, but through CC Mirror, I have been able to enable it
+>
+> It is so simple, yet powerful and IMO beats every orchestration I've seen
+>
+> There's no point building your own
+>
+> Updating CC Mirror later today so that anyone can try this
+> https://t.co/SWrB9Pqy4X
+
+- **Tweet:** https://x.com/nummanali/status/2007849823756575084
+- **Quoted:** https://x.com/nummanali/status/2007768692659015877
+- **What:** CC Mirror tool enabling Claude Code's disabled multi-agent orchestration feature, allowing isolated Claude Code variants with custom providers for enhanced AI assistant capabilities.
+
+---
+
 ## @alexhillman - Bookmark Gang's Lightning Speed
 > bookmark gang does not fuck around 😂
 >
