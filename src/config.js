@@ -100,8 +100,20 @@ const DEFAULT_CONFIG = {
   // Auto-invoke Claude Code after fetching bookmarks
   autoInvokeClaude: true,
 
+  // Auto-invoke OpenCode after fetching bookmarks
+  autoInvokeOpencode: true,
+
+  // CLI tool to use: 'claude' or 'opencode'
+  cliTool: 'claude',
+
   // Claude model to use (sonnet, haiku, opus)
   claudeModel: 'sonnet',
+
+  // OpenCode model to use (any OpenCode-compatible model)
+  opencodeModel: 'opencode/glm-4.7-free',
+
+  // Path to AI CLI binary (claude or opencode) - auto-detected if null
+  claudePath: null,
 
   // Claude invocation timeout in ms (default 15 min)
   claudeTimeout: 900000,
@@ -193,8 +205,20 @@ export function loadConfig(configPath) {
   if (process.env.AUTO_INVOKE_CLAUDE !== undefined) {
     config.autoInvokeClaude = process.env.AUTO_INVOKE_CLAUDE === 'true';
   }
+  if (process.env.AUTO_INVOKE_OPENCODE !== undefined) {
+    config.autoInvokeOpencode = process.env.AUTO_INVOKE_OPENCODE === 'true';
+  }
+  if (process.env.CLI_TOOL) {
+    config.cliTool = process.env.CLI_TOOL;
+  }
+  if (process.env.OPENCODE_MODEL) {
+    config.opencodeModel = process.env.OPENCODE_MODEL;
+  }
   if (process.env.CLAUDE_MODEL) {
     config.claudeModel = process.env.CLAUDE_MODEL;
+  }
+  if (process.env.AI_PATH) {
+    config.claudePath = process.env.AI_PATH;
   }
   if (process.env.CLAUDE_TIMEOUT) {
     config.claudeTimeout = parseInt(process.env.CLAUDE_TIMEOUT, 10);
@@ -247,7 +271,12 @@ export function initConfig(targetPath = './smaug.config.json') {
 
     // Automation (for scheduled jobs)
     autoInvokeClaude: true,
+    autoInvokeOpencode: true,
+    // CLI tool: 'claude' or 'opencode'
+    cliTool: 'claude',
+    // Models for each CLI
     claudeModel: 'sonnet',
+    opencodeModel: 'opencode/glm-4.7-free',
     claudeTimeout: 900000,
 
     // Notifications (optional)

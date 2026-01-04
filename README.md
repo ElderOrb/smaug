@@ -9,6 +9,7 @@ Archive your Twitter/X bookmarks (and/or optionally, likes) to markdown. Automat
 - [Quick Start](#quick-start-5-minutes)
 - [Requirements](#requirements)
 - [Platform Support](#platform-support)
+- [OpenCode CLI Support](#opencode-cli-support)
 - [Getting Twitter Credentials](#getting-twitter-credentials)
 - [What It Does](#what-it-does)
 - [Running](#running)
@@ -16,7 +17,7 @@ Archive your Twitter/X bookmarks (and/or optionally, likes) to markdown. Automat
 - [Automation](#automation)
 - [Output](#output)
 - [Configuration](#configuration)
-- [Claude Code Integration](#claude-code-integration)
+- [AI CLI Integration](#ai-cli-integration)
 - [Troubleshooting](#troubleshooting)
 - [Credits](#credits)
 
@@ -37,15 +38,19 @@ Archive your Twitter/X bookmarks (and/or optionally, likes) to markdown. Automat
 # 1. Install bird CLI (Twitter API wrapper)
 # See https://github.com/steipete/bird for installation
 
-# 2. Clone and install Smaug
+# 2. Install an AI CLI (choose one):
+#    Claude Code: npm install -g @anthropic-ai/claude-code
+#    OpenCode:    npm install -g @opencode/cli
+
+# 3. Clone and install Smaug
 git clone https://github.com/alexknowshtml/smaug
 cd smaug
 npm install
 
-# 3. Run the setup wizard
+# 4. Run the setup wizard
 npx smaug setup
 
-# 4. Run the full job (fetch + process with Claude)
+# 5. Run the full job (fetch + process)
 npx smaug run
 ```
 
@@ -53,12 +58,13 @@ The setup wizard will:
 - Create required directories
 - Guide you through getting Twitter credentials
 - Create your config file
+- Auto-detect your installed AI CLI
 
 ## Requirements
 
 - **Node.js 20+** (uses native `fetch` API)
 - **bird CLI** - Twitter API wrapper (install globally)
-- **Claude Code CLI** - For bookmark analysis (optional, auto-detected)
+- **AI CLI** - For bookmark analysis (Claude Code or OpenCode, optional, auto-detected)
 - **Git** - Optional, for committing changes to version control
 
 No shell utilities (curl, jq, etc.) needed - pure Node.js!
@@ -73,6 +79,150 @@ Smaug works on all major platforms:
 | **macOS 12+** | ✅ Fully supported | Native Node.js APIs |
 | **Linux** | ✅ Fully supported | Native Node.js APIs |
 
+## OpenCode CLI Support
+
+Smaug supports both **Claude Code** and **OpenCode** CLI tools for bookmark analysis. You can choose which CLI to use based on your preferences and API access.
+
+### Choosing Your CLI Tool
+
+Configure which CLI tool to use in `smaug.config.json`:
+
+```json
+{
+  "cliTool": "opencode",  // or "claude"
+  "opencodeModel": "opencode/glm-4.7-free",
+  "claudeModel": "sonnet",
+  "autoInvokeOpencode": true,
+  "autoInvokeClaude": true
+}
+```
+
+Or set via environment variable:
+```bash
+export CLI_TOOL=opencode
+export OPENCODE_MODEL=opencode/glm-4.7-free
+export AUTO_INVOKE_OPENCODE=true
+```
+
+### Using OpenCode
+
+OpenCode is a versatile CLI that supports multiple AI models including free options.
+
+**Setup:**
+```bash
+# Install OpenCode
+npm install -g @opencode/cli
+
+# Configure Smaug to use OpenCode
+npx smaug init
+# Then edit smaug.config.json to set:
+# "cliTool": "opencode"
+# "opencodeModel": "opencode/glm-4.7-free"
+```
+
+**Usage Examples:**
+```bash
+# Run with OpenCode (configured in smaug.config.json)
+npx smaug run
+
+# Or override model for one run
+export OPENCODE_MODEL=opencode/glm-4.7-pro
+npx smaug run
+
+# Fetch and process with OpenCode
+npx smaug fetch 20
+npx smaug run
+```
+
+### Using Claude Code
+
+Claude Code provides advanced reasoning with Anthropic's models (Sonnet, Haiku, Opus).
+
+**Setup:**
+```bash
+# Install Claude Code
+npm install -g @anthropic-ai/claude-code
+
+# Configure Smaug to use Claude
+npx smaug init
+# Then edit smaug.config.json to set:
+# "cliTool": "claude"
+# "claudeModel": "sonnet"
+```
+
+**Usage Examples:**
+```bash
+# Run with Claude (default)
+npx smaug run
+
+# Use Haiku for faster, cheaper processing
+export CLAUDE_MODEL=haiku
+npx smaug run
+
+# Track token usage and costs
+npx smaug run --track-tokens
+```
+
+### CLI Tool Comparison
+
+| Feature | OpenCode | Claude Code |
+|---------|----------|-------------|
+| **Models** | Multiple (GLM-4.7, etc.) | Sonnet, Haiku, Opus |
+| **Cost** | Free tier available | Paid API (Anthropic) |
+| **Setup** | `npm install -g @opencode/cli` | `npm install -g @anthropic-ai/claude-code` |
+| **Token Tracking** | ✅ Supported | ✅ Supported |
+| **Parallel Processing** | ✅ Via Task tool | ✅ Via Task tool |
+| **Auto-detection** | ✅ Cross-platform | ✅ Cross-platform |
+
+### Environment Variables
+
+Both CLIs support these environment variables:
+
+| Variable | Description | Example |
+|----------|-------------|---------|
+| `CLI_TOOL` | Which CLI to use | `opencode` or `claude` |
+| `OPENCODE_MODEL` | OpenCode model name | `opencode/glm-4.7-free` |
+| `CLAUDE_MODEL` | Claude model name | `sonnet`, `haiku`, `opus` |
+| `AUTO_INVOKE_OPENCODE` | Auto-run OpenCode after fetch | `true` or `false` |
+| `AUTO_INVOKE_CLAUDE` | Auto-run Claude after fetch | `true` or `false` |
+| `AI_PATH` | Custom path to CLI binary | `/usr/local/bin/opencode` |
+| `CLAUDE_TIMEOUT` | Processing timeout (ms) | `900000` (15 min) |
+
+### Configuration Examples
+
+**OpenCode with free model:**
+```json
+{
+  "cliTool": "opencode",
+  "opencodeModel": "opencode/glm-4.7-free",
+  "autoInvokeOpencode": true,
+  "autoInvokeClaude": false,
+  "claudeTimeout": 900000
+}
+```
+
+**Claude with Sonnet:**
+```json
+{
+  "cliTool": "claude",
+  "claudeModel": "sonnet",
+  "autoInvokeClaude": true,
+  "allowedTools": "Read,Write,Edit,Glob,Grep,Bash,Task,TodoWrite",
+  "claudeTimeout": 900000
+}
+```
+
+**Mixed usage (switch between them):**
+```json
+{
+  "cliTool": "opencode",
+  "opencodeModel": "opencode/glm-4.7-free",
+  "claudeModel": "sonnet",
+  "autoInvokeOpencode": true,
+  "autoInvokeClaude": true
+}
+```
+
 ### Cross-Platform Features
 
 - ✅ **No shell command dependencies** - Uses native Node.js `fetch` API
@@ -83,11 +233,15 @@ Smaug works on all major platforms:
 
 ### Windows-Specific Notes
 
-1. **Claude CLI Location**:
-   - Smaug automatically searches these Windows paths:
+1. **AI CLI Location**:
+   - Smaug automatically searches these Windows paths for Claude:
      - `%LOCALAPPDATA%\Programs\claude.exe`
      - `%PROGRAMFILES%\Claude\claude.exe`
      - `%USERPROFILE%\AppData\Local\Programs\claude.exe`
+   - And for OpenCode:
+     - `%APPDATA%\Roaming\npm\opencode.cmd`
+     - `%LOCALAPPDATA%\npm\opencode.cmd`
+     - `%LOCALAPPDATA%\Programs\opencode.exe`
 
 2. **No additional tools required**:
    - No `curl` needed
@@ -100,10 +254,13 @@ Smaug works on all major platforms:
 
 ### Troubleshooting - Windows
 
-**"Cannot find Claude binary"**:
+**"Cannot find Claude/OpenCode binary"**:
 ```powershell
 # Check if Claude is installed
 Get-Command claude
+
+# Or check OpenCode
+Get-Command opencode
 
 # Or manually set path in smaug.config.json:
 {
@@ -145,14 +302,14 @@ If you don't want to use the wizard to make it easy, you can manually put your s
 1. **Fetches bookmarks** from Twitter/X using the bird CLI (can also fetch likes, or both)
 2. **Expands t.co links** to reveal actual URLs
 3. **Extracts content** from linked pages (GitHub repos, articles, quote tweets)
-4. **Invokes Claude Code** to analyze and categorize each tweet
+4. **Invokes Claude Code or OpenCode** to analyze and categorize each tweet
 5. **Saves to markdown** organized by date with rich context
 6. **Files to knowledge library** - GitHub repos to `knowledge/tools/`, articles to `knowledge/articles/`
 
 ## Running Manually
 
 ```bash
-# Full job (fetch + process with Claude)
+# Full job (fetch + process with configured CLI)
 npx smaug run
 
 # Fetch from bookmarks (default)
@@ -169,6 +326,9 @@ npx smaug process
 
 # Force re-process (ignore duplicates)
 npx smaug process --force
+
+# Track token usage and costs
+npx smaug run --track-tokens
 
 # Check what's pending
 cat .state/pending-bookmarks.json | jq '.count'
@@ -333,12 +493,17 @@ Create `smaug.config.json`:
 | `includeMedia` | `false` | **EXPERIMENTAL**: Include media attachments (photos, videos, GIFs) |
 | `archiveFile` | `./bookmarks.md` | Main archive file |
 | `timezone` | `America/New_York` | For date formatting |
+| `cliTool` | `claude` | CLI tool to use: `claude` or `opencode` |
 | `autoInvokeClaude` | `true` | Auto-run Claude Code for analysis |
-| `claudeModel` | `sonnet` | Model to use (`sonnet`, `haiku`, or `opus`) |
+| `autoInvokeOpencode` | `true` | Auto-run OpenCode for analysis |
+| `claudeModel` | `sonnet` | Claude model: `sonnet`, `haiku`, or `opus` |
+| `opencodeModel` | `opencode/glm-4.7-free` | OpenCode model (any OpenCode-compatible model) |
+| `claudePath` | `null` | Custom path to CLI binary (auto-detected if null) |
 | `claudeTimeout` | `900000` | Max processing time (15 min) |
 | `webhookUrl` | `null` | Discord/Slack webhook for notifications |
+| `webhookType` | `discord` | Webhook type: `discord`, `slack`, or `generic` |
 
-Environment variables also work: `AUTH_TOKEN`, `CT0`, `SOURCE`, `INCLUDE_MEDIA`, `ARCHIVE_FILE`, `TIMEZONE`, `CLAUDE_MODEL`, etc.
+Environment variables also work: `AUTH_TOKEN`, `CT0`, `SOURCE`, `INCLUDE_MEDIA`, `ARCHIVE_FILE`, `TIMEZONE`, `CLI_TOOL`, `OPENCODE_MODEL`, `CLAUDE_MODEL`, `AUTO_INVOKE_OPENCODE`, `AUTO_INVOKE_CLAUDE`, `AI_PATH`, `CLAUDE_TIMEOUT`, `WEBHOOK_URL`, `WEBHOOK_TYPE`, etc.
 
 ### Experimental: Media Attachments
 
@@ -365,9 +530,9 @@ When enabled, the `media[]` array is included in the pending JSON with:
 1. **Requires bird with media support** - PR [#14](https://github.com/steipete/bird/pull/14) adds media extraction. Until merged, you'll need a fork with this PR or wait for an upstream release. Without it, `--media` is a no-op (empty array).
 2. **Workflow still being refined** - Short screengrabs (< 30s) don't need transcripts, but longer videos might. We're still figuring out the best handling.
 
-## Claude Code Integration
+## AI CLI Integration
 
-Smaug uses Claude Code for intelligent bookmark processing. The `.claude/commands/process-bookmarks.md` file contains instructions for:
+Smaug uses either Claude Code or OpenCode for intelligent bookmark processing (configurable via `cliTool` setting). Both CLIs use the same processing instructions in `.claude/commands/process-bookmarks.md`:
 
 - Generating descriptive titles (not generic "Article" or "Tweet")
 - Filing GitHub repos to `knowledge/tools/`
@@ -376,10 +541,17 @@ Smaug uses Claude Code for intelligent bookmark processing. The `.claude/command
 - Processing reply threads with parent context
 - Parallel processing for 3+ bookmarks (using Haiku subagents for cost efficiency)
 
-You can also run processing manually:
+### Manual Processing
+
+You can also run processing manually with your configured CLI:
 
 ```bash
+# With Claude Code
 claude
+> Run /process-bookmarks
+
+# With OpenCode
+opencode
 > Run /process-bookmarks
 ```
 
@@ -442,14 +614,46 @@ npx smaug run
 
 Your Twitter cookies may have expired. Get fresh ones from your browser.
 
+### "Cannot find Claude/OpenCode binary"
+
+**For Claude:**
+```bash
+# Check if Claude is installed
+claude --version
+
+# Or manually set path in smaug.config.json:
+{
+  "claudePath": "C:\\Users\\YourName\\AppData\\Local\\Programs\\claude.exe"
+}
+```
+
+**For OpenCode:**
+```bash
+# Check if OpenCode is installed
+opencode --version
+
+# Or manually set path in smaug.config.json:
+{
+  "claudePath": "/usr/local/bin/opencode"
+}
+```
+
 ### Processing is slow
 
 - Try `haiku` model instead of `sonnet` in config for faster (but less thorough) processing
+- Switch to OpenCode with `opencode/glm-4.7-free` for faster processing
 - Make sure you're not re-processing with `--force` (causes edits instead of appends)
+
+### OpenCode not working
+
+- Ensure OpenCode is installed: `npm install -g @opencode/cli`
+- Verify model is valid: `opencode models` to see available models
+- Check that `cliTool` is set to `"opencode"` in config
 
 ## Credits
 
 - [bird CLI](https://github.com/steipete/bird) by Peter Steinberger
+- [OpenCode](https://github.com/opencode-ai/opencode) for CLI support
 - Built with Claude Code
 
 ## License
