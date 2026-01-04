@@ -1,5 +1,132 @@
 # Sunday, January 4, 2026
 
+## @adocomplete - Advent of Claude Day 30 - Language Server Protocol
+> Advent of Claude Day 30 - LSP
+>
+> Language Server Protocol in Claude Code provides
+>
+> - Instant diagnostics to see errors and warnings
+> - Navigation with go to definition, find references, and more
+> - Type info and docs for code symbols
+>
+> Claude Code now has IDE-level code intelligence
+
+- **Tweet:** https://x.com/adocomplete/status/2006050274042077398
+- **What:** Advent of Claude Day 30 highlighting Language Server Protocol support in Claude Code, providing IDE-level features: instant diagnostics for errors/warnings, navigation (go to definition, find references), and type info/docs for code symbols.
+
+---
+
+## @cloudxdev - Universal Subagent Directory Structure
+> My universal subagent setup for each project, bookmark it 📂
+>
+> .claude/
+>      ├── agents/                # 7 subagents
+>       │   ├── orchestrator.md
+>       │   ├── code-reviewer.md
+>       │   ├── debugger.md
+>       │   ├── docs-writer.md
+>       │   ├── security-auditor.md
+>       │   ├── refactorer.md
+>       │   └── test-architect.md
+
+- **Tweet:** https://x.com/cloudxdev/status/2005971267870982305
+- **What:** Recommended directory structure for Claude Code subagents: `.claude/agents/` containing 7 specialized agent files (orchestrator, code-reviewer, debugger, docs-writer, security-auditor, refactorer, test-architect).
+
+---
+
+## @BharukaShraddha - 28 Production-Ready AI Projects Repository
+> This GitHub repo isn't a tutorial dump.
+> It contains 28 production-ready AI projects you can actually use.
+>
+> Here's what you'll find inside:
+>
+> Machine Learning Projects
+> → Airbnb price prediction
+> → Flight fare calculator
+> → Student performance tracker
+>
+> AI for Healthcare
+> → Chest disease detection
+> → Heart disease prediction
+> → Diabetes risk analyzer
+>
+> Generative AI Applications
+> → Live Gemini chatbot
+> → Working medical assistant
+> → Document analysis tool
+>
+> Computer Vision Projects
+> → Hand tracking system
+> → Medicine recognition app
+> → OpenCV implementations
+>
+> Data Analysis Dashboards
+> → E-commerce insights
+> → Restaurant analytics
+> → Cricket performance tracker
+>
+> And 10 advanced projects coming soon:
+> → Deepfake detection
+> → Brain tumor classification
+> → Driver drowsiness alert system
+>
+> This isn't just code files.
+> These are end-to-end, working applications.
+
+- **Tweet:** https://x.com/BharukaShraddha/status/2003533177349181869
+- **Link:** https://github.com/KalyanM45/AI-Project-Gallery
+- **What:** Comprehensive collection of 28 production-ready AI projects spanning machine learning (price prediction, flight calculator), healthcare (disease detection), generative AI (chatbots, assistants), computer vision (hand tracking, recognition), and data dashboards. End-to-end working applications with 10 more advanced projects coming soon.
+
+---
+
+## @Argona0x - Polymarket Trading Strategies Guide
+> programmers are making $10k-200k monthly on polymarket
+>
+> here's how they actually do it
+>
+> 1. arbitrage bots - buy YES + NO when combined price < $1
+> 2. statistical arbitrage - find correlated markets that drift apart
+> 3. AI probability models - train ML models to estimate real odds
+> 4. spread farming - buy at bid, sell at ask, repeat
+> 5. copy-trading automation - mirror successful whale traders
+
+- **Tweet:** https://x.com/Argona0x/status/2002391129870803306
+- **What:** Comprehensive guide to 5 Polymarket trading strategies with real trader examples. Covers arbitrage (YES+NO combos, up to $242k example), statistical arbitrage (correlated spreads, $480k example), AI models ($2.2M with 74% accuracy), spread farming, and copy-trading. Includes tech stack (Python, web3-py, VPS) and starter guidance with 50-70% win rates.
+
+---
+
+## @avthars - How To Start Claude Code Projects The Right Way
+> 💥NEW AI CODING TUTORIAL: How To Start Claude Code Projects The Right Way (@claudeai)
+>
+> TIMESTAMPS
+> 00:00 Don't make the same mistake I did
+> 02:30 Phase 1: PLAN
+> 02:54 2 Questions to ask before starting
+> 04:44 How to use AI to help you plan
+> 06:14 Creating a project spec doc
+> 11:36 Phase 2: SETUP
+> 12:04 GitHub Repo setup
+> 13:32 Create your environment variable file (.env)
+> 13:50 CLAUDE.md (and what to put in it)
+> 15:57 Automated Project Documentation
+> 18:24 Install Plugins
+> 19:33 Install MCP Servers
+> 20:52 Setup Custom Slash Commands and Sub-agents
+> 23:22 Advanced setup: Preconfigure Permissions
+> 24:09 Advanced setup: Hooks
+> 24:55 Phase 3: BUILD
+> 25:41 Building Your MVP with Claude
+> 26:33 Workflow 1: Single Feature Development
+> 27:49 Workflow 2: Issue based development
+> 29:19 Workflow 3: Multi-Agent Development (Multi-Clauding)
+> 30:39 Tips for Building Productively
+> 33:04 Applying what you learned
+
+- **Tweet:** https://x.com/avthars/status/2001352241173647744
+- **What:** Comprehensive video tutorial covering the three phases of Claude Code project development: PLAN (spec documentation, AI-assisted planning), SETUP (GitHub repo, environment variables, AGENTS.md, plugins, MCP servers, slash commands), and BUILD (single feature, issue-based, and multi-agent workflows with productivity tips).
+
+---
+
 ## @alpha_pls - 6 Ways to Get More Alpha from Crypto Twitter
 > There is so much alpha on this platform.
 >
