@@ -1,3 +1,684 @@
+# Sunday, January 4, 2026
+
+## @Trisha_Techie - 9 Unknown Websites That Make Life Easier
+> These 9 Unknown Websites will make your life easier. ⤵️
+> 
+> But Beware they are so excellent that it nearly feels ILLEGAL. 💣💥
+> 
+> [ Bookmark for later🔖 ] https://t.co/7Pg9lciojw
+
+- **Tweet:** https://x.com/Trisha_Techie/status/1994367061485822403
+- **What:** A tweet sharing 9 useful websites, posted as a media/photo attachment with no extractable content
+
+---
+
+## @anna54514 - EU Democracy and Sovereignty Response
+> *Replying to @elonmusk:* @vonderleyen If democracy is foundation of freedom, surely your position as leader of EU should be elected directly by people?
+>
+> Święta racja, @ElonMusk! To jest sedno! Jak może Unia Europejska narzucać mojemu krajowi, Polsce, jak ma żyć, co ma robić i jakie standardy stosować? Od tego mam swojego Prezydenta i własny Rząd! Bycie w UE nie oznacza, że Komisja może być ponad moją Konstytucją i wolą narodu. To jest uzurpacja władzy i kompletny brak demokracji! Wstrzymywanie funduszy to SZANTAŻ i stosowanie podwójnych standardów. My, jako Lud, powinniśmy decydować o tym, kto zasiądzie w Europie! Pełna zgoda 🇵🇱
+
+- **Tweet:** https://x.com/anna54514/status/1988643009542451305
+- **Parent:** https://x.com/elonmusk/status/1988603319682748785
+- **What:** A Polish reply supporting Elon Musk's view on EU democracy, expressing concerns about EU overreach and sovereignty
+
+---
+
+## @0xPhilanthrop - SuperGrok crypto trading bot claims
+> SuperGrok is a crypto money printer 🚨
+>
+> I tested a trading bot for a week and it turned 0.25 SOL into 308 SOL.
+>
+> Not even clickbait or smth.
+>
+> Here's how I did it without coding skills 🧵👇 https://t.co/1dSgswNp1u
+
+- **Tweet:** https://x.com/0xPhilanthrop/status/1971622479308472499
+- **What:** A promotional thread claiming a trading bot called SuperGrok turned 0.25 SOL into 308 SOL over a week, targeting users without coding skills
+
+---
+
+## @DeFiRoze - Grok 3 trading bot partnership
+> I partnered with Grok 3 to create ULTIMATE trading bot!🚨
+>
+> ZERO skills &amp; coding needed!
+>
+> Use my prompt to use 100% potential
+>
+> Only this time I am sharing full guide with videos!👇🧵 https://t.co/o47wd5f04y
+
+- **Tweet:** https://x.com/DeFiRoze/status/1931691996521042051
+- **What:** A partnership announcement with Grok 3 for creating a trading bot, claiming no skills or coding needed, with a full guide and videos shared
+
+---
+
+## @leshka_eth - Trading strategy testing advice
+> *Replying to @leshka_eth:* It's normal for code to have errors occasionally. Simply paste code back into DeepSeek and request it to fix issues. The corrected code will work flawlessly without fail
+>
+> Finally, test your trading strategy
+>
+> Always begin by testing strategy with a small portion of your capital, since not all strategies are guaranteed to work
+>
+> If strategy ends up losing money, revisit all steps in guide, starting from strategy creation https://t.co/w0dzMnq6S8
+
+- **Tweet:** https://x.com/leshka_eth/status/1885403682570940879
+- **Parent:** https://x.com/leshka_eth/status/1885403663486833012
+- **What:** Advice to test trading strategies with small capital before full deployment, continuing a thread about trading strategy creation
+
+---
+
+## @DeFiTracer - Telegram Channel Giveaways
+> *Replying to @DeFiTracer:* ✜ In conclusion, you'll have a fully functional sniper bot. Before launching it, make sure to complete following setups:
+>
+> - Create a "List" and insert link into correct variable
+> - Insert ticker database into array
+> - Insert insider wallet database
+> - Insert node into "Node" variable
+> - Set Slippage at 30%
+>
+> In a few days, I'll start running $1,000+ giveaways, giving calls in my TG channel
+>
+> Make sure to follow, while it's still open for FREE!
+>
+> Also I am running giveaway here rn, make sure to participate.
+>
+> Link: https://t.co/kIrKKFQjnH
+
+- **Tweet:** https://x.com/DeFiTracer/status/1833164380088725604
+- **Parent:** https://x.com/DeFiTracer/status/1833164375563419676
+- **Link:** https://t.me/TracerAlpha
+- **What:** Reply tweet promoting a Telegram channel that will run $1,000+ giveaways and provide trading calls. Links to TracerAlpha Telegram channel.
+
+---
+
+## @deepanshusharmx - 7 Insanely Useful Websites
+> 7 Insanely useful websites that feel illegal to know:
+>
+> Save for later🔖 https://t.co/tP2E0y2xwV
+
+- **Tweet:** https://x.com/deepanshusharmx/status/1792835152126914890
+- **Media:** Photo with list of websites
+- **What:** Tweet sharing a curated list of 7 useful websites that provide powerful free tools.
+
+---
+
+## @taikoxyz - Taiko Genesis NFT Collection
+> We're excited to announce our Genesis NFT collection of 888 Taikoons! 🥳
+>
+> This is Taiko's first instance of on-chain NFT community building and empowerment.
+>
+> Join our whitelist on @Metaverse_HQ here: https://t.co/cEAqQQyDzt.
+
+- **Tweet:** https://x.com/taikoxyz/status/1780355509968846970
+- **Link:** https://app.mvhq.io/missions/taikoons-whitelist (paywalled)
+- **What:** Announcement of Taiko's Genesis NFT collection of 888 Taikoons with whitelist registration through Metaverse HQ platform.
+
+---
+
+## @Flowslikeosmo - 30 Free Data Tools for Crypto
+> To find your next 100x, you need 100x Alpha.
+>
+> To find Alpha, you need right set of tools.
+>
+> 30 Data Tools (All of them Free) to level up your game. 🧵👇 https://t.co/o1aKYwQNiV
+
+- **Tweet:** https://x.com/Flowslikeosmo/status/1675519738863312896
+- **Media:** Thread with 30 data tools
+- **What:** Tweet thread sharing 30 free data tools for cryptocurrency research and alpha discovery.
+
+---
+
+## @0xKofi - DefiLlama ChatGPT Plugin
+> Introducing "DefiLlama ChatGPT Plugin🦙✨"
+>
+> Retrieve data on DeFi protocols and blockchains using plain english!
+>
+> Here's how to use it 👇 https://t.co/l6W86r2898
+
+- **Tweet:** https://x.com/0xKofi/status/1669360715025760257
+- **Media:** Video tutorial
+- **What:** Announcement of DefiLlama's ChatGPT plugin that enables querying DeFi protocol and blockchain data using natural language.
+
+---
+
+## @cloudxdev - Claude Code Multi-Agent Workflow Plugin
+> The Claude Code plugin that gives you 7 AI agents (code reviewer, debugger, security auditor, etc.), 6 skills, and 8 automation hooks.
+>
+>  Here's how to use it:
+>
+>  1. Open your terminal
+>  2. Clone repo: git clone https://t.co/8Def5pIk1s
+>  3. Run Claude with plugin: claude --plugin-dir ./claude-workflow
+>
+>  That's it! Claude will now automatically use right agent based on what you ask it to do.
+
+- **Tweet:** https://x.com/cloudxdev/status/2006671601178153444
+- **Link:** https://github.com/CloudAI-X/claude-workflow-v2
+- **Filed:** [claude-workflow-v2.md](./knowledge/tools/claude-workflow-v2.md)
+- **What:** Universal Claude Code workflow plugin with 7 specialized subagents (code reviewer, debugger, security auditor, docs writer, refactorer, test architect, orchestrator), 6 skills, and 8 automation hooks. Automatically selects the right agent based on your task.
+
+---
+
+## @adocomplete - LSP Support in Claude Code
+> Advent of Claude Day 30 - LSP
+>
+> Language Server Protocol in Claude Code provides
+>
+> - Instant diagnostics to see errors and warnings
+> - Navigation with go to definition, find references, and more
+> - Type info and docs for code symbols
+>
+> Claude Code now has IDE-level code intelligence
+
+- **Tweet:** https://x.com/adocomplete/status/2006050274042077398
+- **What:** Advent of Claude Day 30 highlighting Language Server Protocol support in Claude Code, providing IDE-level features: instant diagnostics for errors/warnings, navigation (go to definition, find references), and type info/docs for code symbols.
+
+---
+
+## @cloudxdev - Universal Subagent Directory Structure
+> My universal subagent setup for each project, bookmark it 📂
+>
+> .claude/
+>      ├── agents/                # 7 subagents
+>       │   ├── orchestrator.md
+>       │   ├── code-reviewer.md
+>       │   ├── debugger.md
+>       │   ├── docs-writer.md
+>       │   ├── security-auditor.md
+>       │   ├── refactorer.md
+>       │   └── test-architect.md
+
+- **Tweet:** https://x.com/cloudxdev/status/2005971267870982305
+- **What:** Recommended directory structure for Claude Code subagents: `.claude/agents/` containing 7 specialized agent files (orchestrator, code-reviewer, debugger, docs-writer, security-auditor, refactorer, test-architect).
+
+---
+
+## @BharukaShraddha - 28 Production-Ready AI Projects
+> This GitHub repo isn't a tutorial dump.
+> It contains 28 production-ready AI projects you can actually use.
+>
+> Here's what you'll find inside:
+>
+> Machine Learning Projects
+> → Airbnb price prediction
+> → Flight fare calculator
+> → Student performance tracker
+>
+> AI for Healthcare
+> → Chest disease detection
+> → Heart disease prediction
+> → Diabetes risk analyzer
+>
+> Generative AI Applications
+> → Live Gemini chatbot
+> → Working medical assistant
+> → Document analysis tool
+>
+> Computer Vision Projects
+> → Hand tracking system
+> → Medicine recognition app
+> → OpenCV implementations
+>
+> Data Analysis Dashboards
+> → E-commerce insights
+> → Restaurant analytics
+> → Cricket performance tracker
+>
+> And 10 advanced projects coming soon:
+> → Deepfake detection
+> → Brain tumor classification
+> → Driver drowsiness alert system
+>
+> This isn't just code files.
+> These are end-to-end, working applications.
+>
+> Explore the repo here:
+> https://t.co/2uQ4nvoKVq
+
+- **Tweet:** https://x.com/BharukaShraddha/status/2003533177349181869
+- **Link:** https://lnkd.in/gNkDJTMD (LinkedIn redirect)
+- **What:** Collection of 28 production-ready AI projects including ML (price prediction, flight calculator), healthcare (disease detection), generative AI (chatbots, assistants), computer vision (hand tracking, recognition), and data analysis dashboards. End-to-end working applications, not just code.
+
+---
+
+## @Argona0x - Polymarket Trading Strategies
+> programmers are making $10k-200k monthly on polymarket
+>
+> here's how they actually do it
+>
+> ///
+>
+> 1. arbitrage bots
+>
+> buy YES + NO when combined price < $1
+>
+> example: YES at 48¢ + NO at 49¢ = 97¢ total
+> you lock $0.03 profit per $1 no matter who wins
+>
+> trader "distinct-baguette" made $242k in 1.5 months doing this
+>
+> targets 15-min crypto markets where prices move fast
+>
+> python script polls API every 1-3 seconds, executes when sum < 99¢
+>
+> ///
+>
+> 2. statistical arbitrage
+>
+> find correlated markets that drift apart
+>
+> "trump wins" vs "GOP senate control" should move together
+> when spread hits 4-7%, short expensive one, long cheap one
+> close when they converge
+>
+> trader "sharky6999" made $480k scanning 100+ markets per minute
+>
+> ///
+>
+> 3. AI probability models
+>
+> train ML models to estimate real odds from news/social data
+>
+> if your model says 60% YES but market at 50¢, buy
+>
+> trader "ilovecircle" made $2.2M in 2 months with 74% accuracy
+> uses ensemble of 10 AI models, retrains weekly
+>
+> ///
+>
+> 4. spread farming
+>
+> buy at bid (5¢), sell at ask (6¢), repeat
+>
+> or hedge across platforms (short polymarket, long binance)
+>
+> trader "cry.eth2" made $194k with 1M trades
+>
+> ///
+>
+> 5. copy-trading automation
+>
+> mirror successful whale traders automatically
+>
+> scan profiles, execute proportional trades
+>
+> one bot made $80k in 2 weeks copying near-resolved markets
+>
+> ///
+>
+> tech stack:
+>
+> python + requests library for API calls
+>
+> web3-py for blockchain interactions deploy on VPS for 24/7 operation
+>
+> polymarket has REST APIs for everything:
+>
+> gamma markets API (prices/volumes)
+> CLOB API (place orders)
+> data API (track positions)
+>
+> ///
+>
+> starting point:
+>
+> > build simple arbitrage bot first
+> > fund with $100-1k for testing target high-volume markets (politics/crypto)
+>  > expect 50-70% win rate but focus on positive EV
+
+- **Tweet:** https://x.com/Argona0x/status/2002391129870803306
+- **What:** Comprehensive guide to 5 Polymarket trading strategies: 1) arbitrage bots (YES+NO combos under $1) - $242k example, 2) statistical arbitrage (correlated market spreads) - $480k example, 3) AI probability models - $2.2M example with 74% accuracy, 4) spread farming, 5) copy-trading. Tech stack: Python + requests + web3-py on VPS.
+
+---
+
+## @sockdrawermoney - Git-Native Ticket Tracking
+> @banteg Recommended https://t.co/i7nzDaPNN1
+
+- **Tweet:** https://x.com/sockdrawermoney/status/2007541072269095212
+- **Parent:** https://x.com/banteg/status/2007489213315297424
+- **Link:** https://github.com/wedow/ticket
+- **Filed:** [wedow-ticket.md](./knowledge/tools/wedow-ticket.md)
+- **What:** Fast, powerful, git-native ticket tracking in a single bash script. Full replacement for Beads with zero setup, dependency graphs, and AI-friendly markdown ticket files.
+
+---
+
+## @joelreymont - Dots and Banjo in Zed
+> Check out my @zeddotdev workflow!
+>
+> I made a small and fast replacement for Beads named Dots, then a harness that uses Dots in Zed (Banjo) and lets me drive Claude Code (CC) and Opus at the same time!
+
+> *Quoting @joelreymont:* Banjo 0.6.0 released, now with auto-nudge. My Claude Code session in the @zeddotdev side panel has been running for hours!
+
+- **Tweet:** https://x.com/joelreymont/status/2007536653645004890
+- **Quoted:** https://x.com/joelreymont/status/2006419799501582767
+- **What:** Custom Zed editor workflow with Dots (Beads replacement) and Banjo (harness) that enables simultaneous control of Claude Code and Claude Opus with auto-nudge functionality for long-running sessions.
+
+---
+
+## @jessfraz - Comprehensive Dotfiles with AI Config
+> This is my .codex/AGENTS.md it's pretty ocd and pedantic but that should not be a shocker
+>
+> Tell me shit you do that you can't live without and I missed
+
+- **Tweet:** https://x.com/jessfraz/status/2007682934585864619
+- **Link:** https://github.com/jessfraz/dotfiles/blob/main/.codex/AGENTS.md
+- **Filed:** [jessfraz-dotfiles.md](./knowledge/tools/jessfraz-dotfiles.md)
+- **What:** Extensive dotfiles collection with shell, container, and comprehensive AI assistant configuration including strict guardrails and tool specifications for Claude Code and Codex.
+
+---
+
+## @d0xxed - Bridle Config Manager for AI Harnesses
+> @theo here's everything that didn't fit in the video:
+> 1. opt-in markers for within your config
+> 2. full CLI support with JSON output for custom scripting
+> 3. helper commands and harness status legend
+> 4. awesome horse statue
+
+> *Replying to @d0xxed:* special delivery for @theo
+
+- **Tweet:** https://x.com/d0xxed/status/2007213826190778443
+- **Parent:** https://x.com/d0xxed/status/2007211539821113702
+- **Link:** https://github.com/neiii/bridle
+- **Filed:** [neiii-bridle.md](./knowledge/tools/neiii-bridle.md)
+- **What:** Unified configuration manager and "package manager" for AI coding assistants (Claude Code, OpenCode, Goose, Amp) with TUI, profile management, and automatic schema translation across platforms.
+
+---
+
+## @kr0der - Codex Tips and Agent Scripts Setup
+> if you're also trying out Codex like me, here are some important tips that made Codex way better for me:
+>
+> 1. i always run codex —yolo or else it keeps stopping to ask for permissions. this feels fine as long as your prompt isn't bad.
+>
+> 2. start your setup from @steipete 's repo here - https://t.co/AYAlsng7d5 - i copied nearly all of it and obviously reworded parts that didn't relate to my work.
+
+> *Quoting @thsottiaux:* Simply adding "Ask questions if my request is underspecified" at the end of a prompt to Codex works well as you might expect
+
+- **Tweet:** https://x.com/kr0der/status/2007538273745539187
+- **Quoted:** https://x.com/thsottiaux/status/2006624682515247604
+- **Link:** https://github.com/steipete/agent-scripts/blob/main/AGENTS.MD
+- **Filed:** [steipete-agent-scripts.md](./knowledge/tools/steipete-agent-scripts.md)
+- **What:** Practical tips for using Codex including `--yolo` flag, starting from steipete's agent-scripts setup, and using the `$ask-questions-if-underspecified` skill for better prompts.
+
+---
+
+## @donvito - Claude Chrome Plugin Integration
+> Install this plugin in Chrome
+> https://t.co/iCGA6aQy97 
+>
+> Then start Claude Code
+> $ claude --chrome
+>
+> enjoy https://t.co/aLnBkrR6P5
+
+- **Tweet:** https://x.com/donvito/status/2007736412385448313
+- **Link:** https://claude.com/chrome
+- **What:** Chrome browser extension for Claude Code that enables direct browser interaction. Allows Claude to see, navigate, and interact with web pages in Chrome while maintaining session isolation and enhanced prompts.
+
+---
+
+## @nummanali - CC Mirror Multi-Agent Orchestration
+> Claude Code - Official Multi Agent Orchestration
+>
+> This is a disabled feature, but through CC Mirror, I have been able to enable it
+>
+> It is so simple, yet powerful and IMO beats every orchestration I've seen
+>
+> There's no point building your own
+>
+> Updating CC Mirror later today so that anyone can try this
+
+- **Tweet:** https://x.com/nummanali/status/2007768692659015877
+- **Link:** https://github.com/numman-ali/cc-mirror
+- **Filed:** [cc-mirror.md](./knowledge/tools/cc-mirror.md)
+- **What:** Tool that enables Claude Code's multi-agent orchestration by creating isolated Claude Code variants with custom providers (Z.ai, MiniMax, OpenRouter, LiteLLM). Each variant has its own config, sessions, and API credentials.
+
+---
+
+## @the_smart_ape - Polymarket Bot Performance Update
+> My @Polymarket bot is still running on my Raspberry Pi.
+>
+> 2 days ago: 26 trades triggered, 26 wins, 0 losses
+> Now: 42 trades triggered, 42 wins, 0 losses
+>
+> I could change the parameters to increase the number of triggered orders, but that would make it less conservative.
+>
+> At these settings, I believe the bot can never lose, and each trigger guarantees ~1.5%. I could aim for more, but that would mean taking more risk.
+>
+> I prefer a guaranteed 1.5% per trade rather than higher returns with any chance of loss.
+>
+> I'll keep the bot running until it reaches 200 triggered orders before scaling it with much more capital.
+>
+> In the meantime, I'm building an analysis tool for Polymarket, not a trading bot this time, but an analytics tool that doesn't exist yet and could be very useful.
+> Will keep you posted!
+
+- **Tweet:** https://x.com/the_smart_ape/status/2007743064874590689
+- **What:** Automated trading bot on Polymarket with perfect 42-0 win rate. Conservative parameters ensure ~1.5% guaranteed returns per trade. Author building analytics tool for Polymarket while scaling strategy.
+
+---
+
+## @mikehostetler - Jido 2.0 Agent Swarm
+> Jido 2.0 powering a swarm of 1,575 agents to index a codebase in 7 seconds
+>
+> 2026 is going to be amazing
+
+- **Tweet:** https://x.com/mikehostetler/status/2006556293507461316
+- **Media:** Video demonstration
+- **What:** Jido 2.0 orchestrating 1,575 parallel agents to index an entire codebase in just 7 seconds. Demonstrates massive scalability for agent-based code analysis tasks.
+
+---
+
+## @supermemory - Vibe Coding Integration
+> Copy+Paste from here https://t.co/HEHrZ9vR3R
+
+- **Tweet:** https://x.com/supermemory/status/2007654765216596135
+- **Parent:** https://x.com/supermemory/status/2007654752918904990
+- **Link:** https://supermemory.ai/docs/vibe-coding
+- **What:** Documentation for integrating Supermemory with coding agents like Claude Code in under 2 minutes. Enables AI agents to access realtime documentation knowledge through MCP integration.
+
+---
+
+## @moreconfetti - Clawdbot Personal AI Assistant
+> Update on Crawdad 🦞 (my AI Assistant running on @clawdbot by @steipete )
+>
+> Tonight we built a full weekly meal planning system in Notion.
+>
+> My wife and I take turns cooking, so we had Crawdad set up:
+>
+> - Master meal plan template for all of 2026 (365 days)
+> - Shopping lists sorted by store and aisle (Kroger/Costco/Lowes)
+> - Weather forecast auto-updating on the meal plan list (helps me plan good nights for grilling, soup, etc)
+> - Our go-to recipes catalogued by chef
+> - ⁠It'll remind me in morning/evening digests if I need to plan dinner or grab groceries.
+>
+> I imagine that this will save us at least an hour a week.
+
+- **Tweet:** https://x.com/moreconfetti/status/2007616854689280196
+- **Link:** https://github.com/clawdbot/clawdbot
+- **Filed:** [clawdbot.md](./knowledge/tools/clawdbot.md)
+- **What:** Personal AI assistant platform that runs on any OS/platform. Steve used it to build a complete meal planning system in Notion with year-long templates, sorted shopping lists, weather integration, and automated reminders.
+
+---
+
+## @housecor - Advent of Claude 2025 Guide
+> Last month I enjoyed "Advent of Claude: 31 Days of Claude Code".
+>
+> The author just published this single blog post with all the tips in one spot: https://t.co/b5QChuWrPh
+
+- **Tweet:** https://x.com/housecor/status/2007645358730686497
+- **Link:** https://adocomplete.com/advent-of-claude-2025/
+- **Filed:** [advent-of-claude-2025.md](./knowledge/articles/advent-of-claude-2025.md)
+- **What:** Comprehensive blog post compiling 31 days of Claude Code tips and insights into one accessible resource.
+
+---
+
+## @quantscience_ - AI Hedge Fund with Multiple Analysts
+> His name is @virattt and he's doing something amazing.
+>
+> He's built an AI hedge fund that has:
+>
+> 1. Market Data Analyst
+> 2. Sentiment Analyst
+> 3. Fundamentals Analyst
+> 4. Quant Analyst
+> 5. Risk Manager
+> 6. Portfolio Manager
+
+- **Tweet:** https://x.com/quantscience_/status/2007439126354702493
+- **Parent:** https://x.com/quantscience_/status/2007439123225686080
+- **What:** Reply highlighting @virattt's AI hedge fund project that employs multiple specialized AI analysts - market data, sentiment, fundamentals, quantitative analysis, risk management, and portfolio management.
+
+---
+
+## @jarrodwatts - Claude HUD Plugin
+> Introducing Claude HUD!
+>
+> A Claude Code plugin that shows you:
+> · context remaining in session
+> · what tools are executing
+> · which subagents are running
+> · claude's to-do list progress
+
+- **Tweet:** https://x.com/jarrodwatts/status/2007579355762045121
+- **What:** Claude Code plugin providing real-time visualization dashboard for session metrics including context remaining, active tools, subagent status, and todo list progress.
+
+---
+
+## @nummanali - CC Mirror for GLM 4.7 and M2.1
+> Announcing the release of CC Mirror
+>
+> The best way to use @Zai_org (GLM 4.7) and @MiniMax__AI (M2.1) Coding Plans
+>
+> - Full Model Support
+> - All tools preconfigured
+> - Custom themes
+> - Isolated from CC
+> - Enhanced prompts
+>
+> Start now: npx cc-mirror
+
+- **Tweet:** https://x.com/nummanali/status/2007586417094844517
+- **What:** Tool that provides enhanced access to GLM 4.7 and MiniMax M2.1 coding models with preconfigured tools, custom themes, isolated environments, and improved prompts.
+
+---
+
+## @TodayiLearrned - Posture Correction Exercises
+> If you slouch like this with your shoulders rounded and head jutting forward, do these exercises 👇👇 https://t.co/XJwEt94pHO
+
+- **Tweet:** https://x.com/TodayiLearrned/status/2007448782569435263
+- **What:** Exercises for correcting rounded shoulders and forward head posture, a common issue from prolonged computer use and poor sitting habits.
+
+---
+
+## @Prince_Fynnz - Kegel Exercises for Men
+> All men should practice these Kegel exercises this weekend and see the changes in your bodies. https://t.co/9ED8nFBYrk
+
+- **Tweet:** https://x.com/Prince_Fynnz/status/2007395250927743401
+- **What:** Recommendation for men to practice Kegel exercises for pelvic floor health and bodily improvements.
+
+---
+
+## @marckohlbrugge - X Proxy for LLM Tweet Fetching
+> X blocks bots, including Claude Code. So I made a little proxy command it can use to fetch posts in LLM-friendly format. https://t.co/w0bDsRmC0v
+
+- **Tweet:** https://x.com/marckohlbrugge/status/2007372386090529260
+- **Filed:** [x-proxy-llm.md](./knowledge/tools/x-proxy-llm.md)
+- **What:** Proxy tool created to fetch Twitter/X posts in LLM-friendly format, working around X's blocking of bots including Claude Code.
+
+---
+
+## @housecor - Claude Code Slash Commands vs Skills
+> Problem: In Claude Code, when should I create a custom slash command vs a skill?
+>
+> Solution: Often either works.
+>
+> But, create a slash command when you want to invoke it yourself.
+>
+> And create a skill when you want Claude to automatically lazy load and call it (often useful as part of multi-step processes).
+
+- **Tweet:** https://x.com/housecor/status/2007591718196261300
+- **What:** Guidance on choosing between custom slash commands and skills in Claude Code - use slash commands for manual invocation, skills for automatic lazy-loading in multi-step workflows.
+
+---
+
+## @yulintwt - How Founders Find $1M Ideas
+> This guy literally leaks how founders find $1m ideas for free https://t.co/ravp310WQr
+
+- **Tweet:** https://x.com/yulintwt/status/2007407101275213971
+- **What:** Resource revealing the methods founders use to discover million-dollar business ideas, shared freely.
+
+---
+
+## @avthars - How To Start Claude Code Projects The Right Way
+> 💥NEW AI CODING TUTORIAL: How To Start Claude Code Projects The Right Way (@claudeai )
+
+- **Tweet:** https://x.com/avthars/status/2001352241173647744
+- **What:** Comprehensive video tutorial covering the three phases of Claude Code project development: PLAN (spec documentation, AI-assisted planning), SETUP (GitHub repo, environment variables, AGENTS.md, plugins, MCP servers, slash commands), and BUILD (single feature, issue-based, and multi-agent workflows with productivity tips).
+
+---
+
+## @thetripathi58 - Grok Stock Trading Automation Prompts
+> GROK IS A GENIUS STOCK TRADER
+>
+> Most people have no clue how to use it.
+>
+> Here are 7 prompts to unlock stock trading automation:
+
+- **Tweet:** https://x.com/thetripathi58/status/2000958770235752885
+- **What:** Prompts for using Grok AI to automate stock trading analysis and decisions.
+
+---
+
+## @ChrisLaubAI - Claude Opus 4.5 Consulting Prompts
+> CLAUDE OPUS 4.5 JUST KILLED CONSULTING AS WE KNOW IT
+> and almost nobody understands how big this is.
+>
+> Here are 3 prompts I use to get McKinsey level answers instantly 👇
+
+- **Tweet:** https://x.com/ChrisLaubAI/status/1998709976957857831
+- **What:** Prompts for using Claude Opus 4.5 to generate consulting-level insights and analysis.
+
+---
+
+## @SolanaSensei - VPN Travel Hacks for Cheaper Deals
+> No way this actually works wtf
+>
+> VPN set to 🇮🇳 = cheaper flights
+> VPN set to 🇿🇦 = cheaper hotels
+> VPN set to 🇲🇽 = cheaper Airbnbs
+> VPN set to 🇧🇷 = cheaper car rentals
+>
+> Airlines: "Prices vary by region"
+> Me: "Cool, so does my IP"
+
+- **Tweet:** https://x.com/SolanaSensei/status/1997637972024541490
+- **What:** Travel cost-saving technique using VPN to change IP location and access cheaper regional pricing for flights, hotels, Airbnbs, and car rentals.
+
+---
+
+## @AIBuzzNews - How to Delete Your Google Activity
+> Step 1: Erase Your Traces
+>
+> Visit: https://t.co/BBQS9RFpXv 
+>
+> Click on 'Delete'.
+>
+> Use "Filter by Google product" option to pinpoint areas like Google Maps or Video Search.
+>
+> Choose your time period, then hit delete. https://t.co/IOfaT7RHDO
+
+> *Replying to @AIBuzzNews:* I deleted my entire digital footprint.
+>
+> You can too.
+>
+> Here's how I did it:
+
+- **Tweet:** https://x.com/AIBuzzNews/status/1995128950696071253
+- **Parent:** https://x.com/AIBuzzNews/status/1995128949886632077
+- **Link:** https://myactivity.google.com/
+- **Filed:** [delete-google-activity.md](./knowledge/articles/delete-google-activity.md)
+- **What:** Guide for deleting your entire digital footprint from Google's services, including Maps, Video Search, and other Google products with time period filtering options.
+
+---
+
 # Friday, January 2, 2026
 
 ## @parcadei - Continuous Claude v2 Context Management
@@ -399,3 +1080,73 @@ it's live now do check it out and would appreciate your feedback https://t.co/DO
 
 - **Tweet:** https://x.com/donvito/status/2006743894147711370
 - **What:** Follow-up endorsement emphasizing the value proposition of GLM 4.7 at $3/month subscription rate. Reflects developer sentiment about the model's capabilities relative to pricing.
+
+---
+
+## @supermemory - Install-MCP CLI Tool
+> Install MCP now supports @opencode
+>
+> 𝚋𝚞𝚗𝚒 𝚒𝚗𝚜𝚝𝚊-𝚖𝚌𝚙 𝚑𝚝𝚝𝚙://𝚖𝚌𝚙.𝚜𝚞𝚙𝚎𝚖𝚘𝚖𝚎𝚛𝚢.𝚊𝚒/𝚖𝚌𝚙 --𝚌𝚕𝚒𝚒𝚗𝚗 𝚘𝚙𝚎𝚗𝚌𝚘𝚍𝚎
+>
+> - handles auth across clients
+> - deals with the different config schemas (so you dont have to)
+
+- **Tweet:** https://x.com/supermemory/status/2007565682754625805
+- **Link:** https://github.com/supermemoryai/install-mcp
+- **Filed:** [install-mcp.md](./knowledge/tools/install-mcp.md)
+- **What:** Simple CLI to install and manage MCP servers into any client with auth included. Handles authentication across clients and different config schemas automatically.
+
+---
+
+## @banteg - Takopi Interactive Onboarding
+> takopi v0.6.0 now has interactive onboarding
+>
+> takopi walks you through:
+> - creating a telegram bot
+> - detecting your chat id automatically
+> - picking your default agent
+>
+> no more manual config editing
+
+- **Tweet:** https://x.com/banteg/status/2007523410256244882
+- **What:** Takopi v0.6.0 update introduces interactive onboarding that guides users through creating Telegram bots, auto-detecting chat IDs, and selecting default agents—eliminating manual config editing.
+
+---
+
+## @AlexFinn - Claude Code Context Management Tips
+> 🔶Load up your context
+>
+> CC's context management has gotten MASSIVE improvements in the last few weeks
+>
+> It now compacts intelligently, allowing you to keep context for a LONG time
+>
+> Don't be afraid to load context by having CC review your architecture at the beginning of sessions
+
+- **Tweet:** https://x.com/AlexFinn/status/2007585397300441204
+- **Parent:** https://x.com/AlexFinn/status/2007585395551387992
+- **What:** Two Claude Code tips: 1) Connect to Git early for full commit history access, and 2) Load context at session start by having CC review your architecture—intelligent compaction now allows keeping context for extended periods.
+
+---
+
+## @irl_danB - OpenProse AI Programming Language
+> "Wow."
+>
+> the OpenProse VM is a new kind of computer
+>
+> try it in 30 seconds:
+>
+> https://www.prose.md/
+>
+> install skill (no code, no dependencies) in Claude Code, Opencode, Amp, Codex
+>
+> restart to load skill
+>
+> `openprose boot`
+>
+> onboarding is built in, it should hold your hand from there
+
+- **Tweet:** https://x.com/irl_danB/status/2007595082229395519
+- **Link:** https://www.prose.md/
+- **Filed:** [openprose.md](./knowledge/articles/openprose.md)
+- **What:** OpenProse treats AI sessions as Turing-complete computers with a new programming language that structures English into unambiguous control flow. Available as a skill for Claude Code, Opencode, Amp, and Codex with built-in onboarding.
+
