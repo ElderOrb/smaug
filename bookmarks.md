@@ -1,5 +1,91 @@
 # Sunday, January 4, 2026
 
+## @wacy_time1 - 5 Free AI Chrome Extensions for Productivity & Crypto Research
+> 🧵 1/ It may sound crazy, but I trusted AI with my investment and it paid off big time.
+> 
+> ChatGPT has been dethroned, here are real game-changers.
+> 
+> 5 free AI Chrome extensions that'll improve your productivity and crypto research by 10x ⬇️
+> 
+> 1️⃣ @Glarity_summary - Any article or lengthy thread will take you about 20 seconds to read.
+> 
+> The tool features:
+> • Create a concise summary
+> • Highlight key points
+> • Use a Q&A format
+> • Translate results into various languages
+> 
+> 2️⃣ @_Glasp YouTube Summary - Say goodbye to watching full-length videos.
+> 
+> The tool features:
+> • Generate video summaries in text format
+> • Divide videos into timecodes with descriptions
+> • Open results immediately in ChatGPT
+> • Translate into any language
+> 
+> 3️⃣ @scispace_ - If you require a comprehensive analysis of information but struggle to comprehend certain aspects, this tool is prepared to clarify everything in straightforward terms with just two clicks.
+> 
+> 4️⃣ @Wiseone_io - When reading articles, certain terms may be unclear and require a comprehensive explanation. Wiseone achieves this effortlessly with just a couple of clicks.
+> 
+> 5️⃣ Twemex - Additional Sidebar for Twitter enabling analysis of popular tweets and threads from individual accounts or entire Twitter Lists. Makes it 100 times easier to find right threads.
+> (the link to the extension is here @Links_by_Wacy)
+> 
+> 📹 Allow me to showcase functionality of all tools in short videos ⬇️
+
+- **Tweet:** https://x.com/wacy_time1/status/1663910129270497282
+- **What:** A comprehensive thread recommending 5 free AI Chrome extensions (Glarity, Glasp YouTube Summary, scispace, Wiseone, and Twemex) that enhance productivity and crypto research capabilities through summarization, translation, and analysis features.
+
+---
+
+## @StevenMatcha - Instadapp Avocado Gas Drop Guide
+> Have you received an Avocado Gas Drop from @instadapp ? Most recently we collaborated with @AlphaInsiders and airdropped over $70,000 in Gas Credits!
+> 
+> Here is your MEGA thread to get you using Avocado like a boss 😎
+> 
+> 🥑 ⭐ 🥑 ⭐🥑 ⭐🥑 ⭐🥑 ⭐🥑 ⭐🥑 ⭐🥑 ⭐🥑 ⭐ https://t.co/1ruWVE0exi
+
+- **Tweet:** https://x.com/StevenMatcha/status/1651895043333193730
+- **Link:** https://x.com/StevenMatcha/status/1651895043333193730/photo/1
+- **What:** A thread guide about Instadapp's Avocado gas drop program, which collaborated with AlphaInsiders to airdrop over $70,000 in gas credits, teaching users how to use Avocado effectively.
+
+---
+
+## @LeechProtocol - DeFi Tools Thread
+> Are you ready to master #DeFi?
+> 
+> Uncover must-have tools to navigate this world.
+> 
+> Don't wait, RT it now to save it!
+> 
+> A thread of useful tools for DeFi adventurers with a couple of use cases as examples.
+> Mega🧵 🔄 https://t.co/ENEaRXHZDL
+
+- **Tweet:** https://x.com/LeechProtocol/status/1648292801325543430
+- **Link:** https://x.com/LeechProtocol/status/1648292801325543430/photo/1
+- **What:** A comprehensive thread sharing essential DeFi tools for navigating decentralized finance, with practical use case examples for beginners and experienced users alike.
+
+---
+
+## @burstingbagel - Early-Stage Crypto Projects
+> (1/14) First off, I'm a researchooor not a threadooor so here's a list of some of most interesting early-stage projects I've come across recently and a quick TLDR on what they plan on doing. 90% of them haven't launched their product or released a token yet.
+> 
+> 🧵👇
+
+- **Tweet:** https://x.com/burstingbagel/status/1547228534749270017
+- **What:** A researcher shares insights on promising early-stage crypto projects, noting that most haven't launched products or tokens yet, providing a valuable preview of upcoming innovations in space.
+
+---
+
+## @DegenCitadel - DegenDAO Members List
+> A list of some of DegenDAO members
+> https://t.co/tWPHozkDOF
+
+- **Tweet:** https://x.com/DegenCitadel/status/1465409683783438337
+- **Link:** https://x.com/i/lists/1453835231459307520/members
+- **What:** A Twitter list containing members of DegenDAO community, useful for following DegenDAO participants and their activities.
+
+---
+
 ## @banteg - AI Agent Worktrees Documentation
 > started documenting my agents workflows, starting from worktrees. will gradually expand on it. what else do you wish to know?
 
@@ -1206,3 +1292,69 @@ it's live now do check it out and would appreciate your feedback https://t.co/DO
 - **Filed:** [openprose.md](./knowledge/articles/openprose.md)
 - **What:** OpenProse treats AI sessions as Turing-complete computers with a new programming language that structures English into unambiguous control flow. Available as a skill for Claude Code, Opencode, Amp, and Codex with built-in onboarding.
 
+
+---
+
+## @captainsafia - Burrow v1.3.0 Directory-Scoped Secrets
+> burrow v1.3.0 is out ✨
+>
+> Secrets now autoload per-directory (direnv-style), so right values are always in scope and never committed.
+
+- **Tweet:** https://x.com/captainsafia/status/2007215212932350165
+- **Link:** https://github.com/captainsafia/burrow
+- **Filed:** [burrow.md](./knowledge/tools/burrow.md)
+- **What:** Directory-scoped secrets manager that autoloads secrets per directory (direnv-style) using local SQLite storage. Supports inheritance, blocking, and export to multiple formats (bash, fish, powershell, dotenv, json).
+
+---
+
+## @nummanali - Advent of Claude Comprehensive Guide
+> All of of coolest Claude Code features written in a slick blog post from @adocomplete
+>
+> Even I didn't know all of these!
+>
+> Bookmark and read with some coffee
+
+> *Quoting @adocomplete:* I turned the Advent of Claude into a blog post where I could provide additional context, resources, and re-ordered of tips into a more logical order going from startup to advanced capabilities.
+
+- **Tweet:** https://x.com/nummanali/status/2007567741327184086
+- **Quoted:** https://x.com/adocomplete/status/2007518563356291573
+- **Link:** https://adocomplete.com/advent-of-claude-2025/
+- **Filed:** [advent-of-claude-2025.md](./knowledge/articles/advent-of-claude-2025.md)
+- **What:** Comprehensive blog post compiling 31 days of Claude Code tips into one accessible resource, reorganized with progressive learning from basic to advanced features plus additional context.
+
+---
+
+## @hayesdev_ - Claude Skills Setup Demo
+> This guy literally shows the fastest way to set up Claude's skills step by step
+
+- **Tweet:** https://x.com/hayesdev_/status/2007390743304999252
+- **Media:** Photo demonstration
+- **What:** Visual guide showing step-by-step setup process for Claude Code skills, demonstrating the fastest workflow configuration.
+
+---
+
+## @nikunj - Claude Skills Auto-Discovery Prompt
+> If you use Claude heavily, this one simple trick will change your life and also help you get started with Skills..
+>
+> "Look at ALL my previous chats - figure out what kind of skills I can potentially make to make my workflows better and easier. For example, I can think of X skill and Y skill to automate these Z workflows. What else do you recommend?"
+>
+> It has now recommended 12 other skills that are things I repeat on a constant basis.
+>
+> Skills are WAY more accessible for regular folks since it's just a .md file and it's easy to tune with Claude.
+>
+> It also lives natively in Claude Desktop app so easy to invoke vs. having to create fancy workflows.
+
+- **Tweet:** https://x.com/nikunj/status/2007543585630200220
+- **What:** Practical method for discovering automation opportunities using Claude Code skills. By asking Claude to analyze all previous chats and recommend skills based on repetitive workflows, author discovered 12 new automation patterns. Skills are simple .md files that live natively in Claude Desktop, making them accessible without complex workflow setups.
+
+---
+
+## @steipete - Clawdis Personal Assistant Platform
+> Clawdis is hard to explain, but after seeing it for 5 min you'll be a believer.
+
+> *Quoting @pepicrft:* @steipete's clawdis is awesome. I now understand his excitement for tool. It can literally replace many of the apps that I was using previously.
+
+- **Tweet:** https://x.com/steipete/status/2007547366103232821
+- **Quoted:** https://x.com/pepicrft/status/2007511260825563418
+- **Link:** https://discord.com/invite/qkhbAGHRBT
+- **What:** Personal AI assistant platform (Clawdis) that can replace many daily apps. Discord server available for community access and to see the tool in action.
