@@ -320,6 +320,509 @@ This is the story. https://t.co/R65dGhou8y
 - **What:** Link to documentation for integrating Supermemory MCP into coding agents like Claude Code for real-time documentation access.
 
 
+
+## @alexhillman - Bookmark Gang Activity
+> bookmark gang does not fuck around 😂
+>
+> this is in less than 12 hrs.
+
+- **Tweet:** https://x.com/alexhillman/status/2007136609007968482
+- **What:** Humorous post about rapid bookmarking activity, showing engagement within 12 hours.
+
+## @cloudxdev - Claude Workflow v2
+> I have published the whole agents, skills, commands, hooks files that I use as a "project-starter".
+>
+> Check it out
+>
+> https://t.co/1fOMe2jOeL
+
+- **Tweet:** https://x.com/cloudxdev/status/2006552219186008291
+- **Link:** https://github.com/CloudAI-X/claude-workflow-v2
+- **Filed:** [claude-workflow-v2.md](./knowledge/tools/claude-workflow-v2.md)
+- **What:** Complete Claude Code workflow with 7 AI agents, 6 skills, 8 automation hooks, and 12 CLI commands for project startup.
+
+## @alexhillman - JFDI System Demo
+> Realizing that most people joining my lil ai exec assistant party haven't seen the full demo of the JFDI system that I built around Claude Code.
+>
+> Here's the initial walk-thru i recorded a couple of weeks back https://t.co/QwYZ6okZdx
+>
+> I'll do some more updated videos when we are back from the holiday break, since I've been building exclusively on mobile (and from within the JFDI system itself) since Christmas day 😎
+
+- **Tweet:** https://x.com/alexhillman/status/2005316274042089964
+- **What:** Demo of JFDI system built around Claude Code, with plans for updated videos after holiday break.
+
+## @hasantoxr - Video to Skill Plan
+> BREAKING: I stopped watching 2-hour YouTube tutorials.
+>
+> Grok now turns any video into a step-by-step skill plan.
+>
+> Here are 8 prompts that convert videos into mastery:
+
+- **Tweet:** https://x.com/hasantoxr/status/2006351230151585805
+- **What:** Method for using Grok to convert YouTube tutorials into step-by-step skill plans with 8 prompts.
+
+## @cloudxdev - Claude Code Plugin
+> The Claude Code plugin that gives you 7 AI agents (code reviewer, debugger, security auditor, etc.), 6 skills, and 8 automation hooks.
+>
+>   Here's how to use it:
+>
+>   1. Open your terminal
+>   2. Clone the repo: git clone https://t.co/8Def5pIk1s
+>   3. Run Claude with the plugin: claude --plugin-dir ./claude-workflow
+>
+>   That's it! Claude will now automatically use the right agent based on what you ask it to do.
+>
+>   https://t.co/gMPrvCbkcF
+
+- **Tweet:** https://x.com/cloudxdev/status/2006671601178153444
+- **Link:** https://github.com/CloudAI-X/claude-workflow-v2
+- **Filed:** [claude-workflow-v2.md](./knowledge/tools/claude-workflow-v2.md)
+- **What:** Claude Code plugin providing 7 AI agents, 6 skills, and 8 automation hooks for automatic task-based agent selection.
+
+## @adocomplete - Advent of Claude Day 30 - LSP
+> Advent of Claude Day 30 - LSP
+>
+> Language Server Protocol in Claude Code provides
+>
+> - Instant diagnostics to see errors and warnings
+> - Navigation with go to definition, find references, and more
+> - Type info and docs for code symbols
+>
+> Claude Code now has IDE-level code intelligence
+
+- **Tweet:** https://x.com/adocomplete/status/2006050274042077398
+- **What:** Advent of Claude Day 30 covering LSP integration in Claude Code for IDE-level code intelligence.
+
+## @cloudxdev - Universal Subagent Setup
+> My universal subagent setup for each project, bookmark it 📂
+>
+> .claude/
+>      ├── agents/                # 7 subagents
+>       │   ├── orchestrator[.]md
+>       │   ├── code-reviewer[.]md
+>       │   ├── debugger[.]md
+>       │   ├── docs-writer[.]md
+>       │   ├── security-auditor[.]md
+>       │   ├── refactorer[.]md
+>       │   └── test-architect[.]md
+
+- **Tweet:** https://x.com/cloudxdev/status/2005971267870982305
+- **What:** Universal subagent directory structure for Claude Code projects with 7 specialized agents.
+
+## @BharukaShraddha - 28 Production AI Projects
+> This GitHub repo isn't a tutorial dump.
+> It contains 28 production-ready AI projects you can actually use.
+>
+> Here's what you'll find inside:
+>
+> Machine Learning Projects
+> → Airbnb price prediction
+> → Flight fare calculator
+> → Student performance tracker
+>
+> AI for Healthcare
+> → Chest disease detection
+> → Heart disease prediction
+> → Diabetes risk analyzer
+>
+> Generative AI Applications
+> → Live Gemini chatbot
+> → Working medical assistant
+> → Document analysis tool
+>
+> Computer Vision Projects
+> → Hand tracking system
+> → Medicine recognition app
+> → OpenCV implementations
+>
+> Data Analysis Dashboards
+> → E-commerce insights
+> → Restaurant analytics
+> → Cricket performance tracker
+>
+> And 10 advanced projects coming soon:
+> → Deepfake detection
+> → Brain tumor classification
+> → Driver drowsiness alert system
+>
+> This isn't just code files.
+> These are end-to-end, working applications.
+>
+> Explore the repo here:
+> https://t.co/2uQ4nvoKVq
+>
+> Save it for later.
+> Repost ♻️ if you're building with AI.
+>
+> Check my profile for more AI resources 👋
+
+- **Tweet:** https://x.com/BharukaShraddha/status/2003533177349181869
+- **What:** GitHub repo with 28 production-ready AI projects across ML, healthcare, generative AI, computer vision, and data analysis.
+
+
+
+## @avthars - Claude Code Project Setup Tutorial
+> 💥NEW AI CODING TUTORIAL: How To Start Claude Code Projects The Right Way (@claudeai )
+>
+> TIMESTAMPS
+> 00:00 Don't make the same mistake I did
+> 02:30 Phase 1: PLAN
+> 02:54 2 Questions to ask before starting
+> 04:44 How to use AI to help you plan
+> 06:14 Creating a project spec doc
+> 11:36 Phase 2: SETUP
+> 12:04 GitHub Repo setup
+> 13:32 Create your environment variable file (.env)
+> 13:50 CLAUDE md (and what to put in it)
+> 15:57 Automated Project Documentation
+> 18:24 Install Plugins
+> 19:33 Install MCP Servers
+> 20:52 Setup Custom Slash Commands and Sub-agents
+> 23:22 Advanced setup: Preconfigure Permissions
+> 24:09 Advanced setup: Hooks
+> 24:55 Phase 3: BUILD
+> 25:41 Building Your MVP with Claude
+> 26:33 Workflow 1: Single Feature Development
+> 27:49 Workflow 2: Issue based development
+> 29:19 Workflow 3: Multi-Agent Development (Multi-Clauding)
+> 30:39 Tips for Building Productively
+> 33:04 Applying what you learned
+
+- **Tweet:** https://x.com/avthars/status/2001352241173647744
+- **What:** Comprehensive video tutorial covering 3 phases of Claude Code project setup: planning, setup (GitHub, .env, CLAUDE.md, plugins, MCP, commands), and building (MVP workflows, multi-agent development).
+
+## @thetripathi58 - Grok Stock Trading Prompts
+> GROK IS A GENIUS STOCK TRADER
+>
+> Most people have no clue how to use it.
+>
+> Here are 7 prompts to unlock stock trading automation:
+
+- **Tweet:** https://x.com/thetripathi58/status/2000958770235752885
+- **What:** Tips for using Grok AI for stock trading automation with 7 specialized prompts.
+
+## @ChrisLaubAI - Claude Opus 4.5 Consulting
+> CLAUDE OPUS 4.5 JUST KILLED CONSULTING AS WE KNOW IT
+> and almost nobody understands how big this.
+>
+> Here are the 3 prompts I use to get McKinsey level answers instantly 👇
+
+- **Tweet:** https://x.com/ChrisLaubAI/status/1998709976957857831
+- **What:** Claims Claude Opus 4.5 can provide McKinsey-level consulting answers with 3 specialized prompts.
+
+## @SolanaSensei - VPN Price Hacks
+> No way this actually works wtf
+>
+> VPN set to 🇮🇳 = cheaper flights
+> VPN set to 🇿🇦 = cheaper hotels
+> VPN set to 🇲🇽 = cheaper Airbnbs
+> VPN set to 🇧🇷 = cheaper car rentals
+>
+> Airlines: "Prices vary by region"
+> Me: "Cool, so does my IP"
+
+- **Tweet:** https://x.com/SolanaSensei/status/1997637972024541490
+- **What:** VPN location tricks for cheaper travel bookings - using different country IPs to get better prices on flights, hotels, Airbnbs, and car rentals.
+
+## @AIBuzzNews - Delete Google Activity
+> Step 1: Erase Your Traces
+>
+> Visit: https://t.co/BBQS9RFpXv
+>
+>  Click on 'Delete'.
+>
+> Use the "Filter by Google product" option to pinpoint areas like Google Maps or Video Search.
+>
+> Choose your time period, then hit delete.
+
+- **Tweet:** https://x.com/AIBuzzNews/status/1995128950696071253
+- **Parent:** https://x.com/AIBuzzNews/status/1995128949886632077
+- **Link:** https://myactivity.google.com/?continue=https://myactivity.google.com/myactivity
+- **Filed:** [myactivity-google.md](./knowledge/articles/myactivity-google.md)
+- **What:** Step-by-step guide to deleting your Google activity data using My Activity tool with product filters and time period selection.
+
+## @Trisha_Techie - 9 Unknown Websites
+> These 9 Unknown Websites will make your life easier. ⤵️
+>
+> But Beware they are so excellent that it nearly feels ILLEGAL. 💣💥
+>
+> [ Bookmark for later🔖 ] https://t.co/7Pg9lciojw
+
+- **Tweet:** https://x.com/Trisha_Techie/status/1994367061485822403
+- **What:** Collection of 9 useful websites that feel "almost illegal" to know, shared as a visual post.
+
+## @anna54514 - EU Democracy Reply
+> Święta racja, @ElonMusk! To jest sedno! Jak może Unia Europejska narzucać mojemu krajowi, Polsce, jak ma żyć, co ma robić i jakie standardy stosować? Od tego mam swojego Prezydenta i własny Rząd! Bycie w UE nie oznacza, że Komisja może być ponad moją Konstytucją i wolą narodu. To jest uzurpacja władzy i kompletny brak demokracji! Wstrzymywanie funduszy to SZANTAŻ i stosowanie podwójnych standardów. My, jako Lud, powinniśmy decydować o tym, kto zasiądzie w Europie! Pełna zgoda 🇵🇱
+>
+> *Replying to @elonmusk:* @vonderleyen If democracy is the foundation of freedom, surely your position as leader of the EU should be elected directly by the people?
+
+- **Tweet:** https://x.com/anna54514/status/1988643009542451305
+- **Parent:** https://x.com/elonmusk/status/1988603319682748785
+- **What:** Polish user's passionate reply supporting Elon Musk's call for direct EU leadership elections, criticizing EU overreach and fund withholding as undemocratic.
+
+## @0xPhilanthrop - SuperGrok Trading Bot
+> SuperGrok is a crypto money printer 🚨
+>
+> I tested a trading bot for a week and it turned 0.25 SOL into 308 SOL.
+>
+> Not even clickbait or smth.
+>
+> Here’s how I did it without coding skills 🧵👇 https://t.co/1dSgswNp1u
+
+- **Tweet:** https://x.com/0xPhilanthrop/status/1971622479308472499
+- **What:** Claims of a trading bot that turned 0.25 SOL into 308 SOL in a week, shared as a visual post.
+
+
+## @DeFiRoze - Grok 3 Trading Bot
+> I partnered with Grok 3 to create ULTIMATE trading bot!🚨
+>
+> ZERO skills & coding needed!
+>
+> Use my prompt to use 100% potential
+>
+> Only this time I am sharing full guide with videos!👇🧵 https://t.co/o47wd5f04y
+
+- **Tweet:** https://x.com/DeFiRoze/status/1931691996521042051
+- **What:** Guide to creating a trading bot using Grok 3 with zero coding skills, shared as a visual post with videos.
+
+## @leshka_eth - Test Trading Strategy
+> Finally, test the trading strategy
+>
+> Always begin by testing the strategy with a small portion of your capital, since not all strategies are guaranteed to work
+>
+> If the strategy ends up losing money, revisit all the steps in the guide, starting from strategy creation https://t.co/w0dzMnq6S8
+>
+> *Replying to @leshka_eth:* It's normal for the code to have errors occasionally
+>
+> Simply paste the code back into DeepSeek and request it to fix the issues
+>
+> The corrected code will work flawlessly without fail https://t.co/DmpsaHWaax
+
+- **Tweet:** https://x.com/leshka_eth/status/1885403682570940879
+- **Parent:** https://x.com/leshka_eth/status/1885403663486833012
+- **What:** Trading strategy testing advice - start with small capital and iterate if losing money, shared as a reply with visual guide.
+
+## @DeFiTracer - Telegram Channel Giveaway
+> In a few days, I'll start running $1,000+ giveaways, giving calls in my TG channel
+>
+> Make sure to follow, while it's still open for FREE!
+>
+> Also I am running giveaway here rn, make sure to participate.
+>
+> Link: https://t.co/kIrKKFQjnH https://t.co/0i0t4vqa0J
+>
+> *Replying to @DeFiTracer:* In conclusion, you'll have a fully functional sniper bot. Before launching it, make sure to complete the following setups:
+>
+> - Create a "List" and insert the link into the correct variable
+> - Insert the ticker database into the array
+> - Insert the insider wallet database
+> - Insert the node into the "Node" variable
+> - Set the Slippage at 30%
+
+- **Tweet:** https://x.com/DeFiTracer/status/1833164380088725604
+- **Parent:** https://x.com/DeFiTracer/status/1833164375563419676
+- **What:** Telegram channel promotion with $1,000+ giveaways and trading calls, shared as a reply with sniper bot setup checklist.
+
+## @deepanshusharmx - 7 Useful Websites
+> 7 Insanely useful websites that feel illegal to know:
+>
+> Save for later🔖 https://t.co/tP2E0y2xwV
+
+- **Tweet:** https://x.com/deepanshusharmx/status/1792835152126914890
+- **What:** Collection of 7 useful websites that feel "illegal" to know, shared as a visual post.
+
+## @taikoxyz - Taikoons NFT Whitelist
+> We're excited to announce our Genesis NFT collection of 888 Taikoons! 🥳
+>
+> This is Taiko's first instance of on-chain NFT community building and empowerment.
+>
+> Join our whitelist on @Metaverse_HQ here: https://t.co/cEAqQQyDzt. https://t.co/5nV0uwXqhu
+
+- **Tweet:** https://x.com/taikoxyz/status/1780355509968846970
+- **What:** Taiko Genesis NFT collection (888 Taikoons) whitelist announcement via Metaverse HQ.
+
+## @Flowslikeosmo - 30 Free Data Tools
+> To find your next 100x, you need 100x the Alpha.
+>
+> To find Alpha, you need the right set of tools.
+>
+> 30 Data Tools (All of them Free) to level up your game. 🧵👇 https://t.co/o1aKYwQNiV
+
+- **Tweet:** https://x.com/Flowslikeosmo/status/1675519738863312896
+- **What:** Thread sharing 30 free data tools for finding alpha and leveling up trading research.
+
+## @0xKofi - DefiLlama ChatGPT Plugin
+> Introducing "DefiLlama ChatGPT Plugin🦙✨"
+>
+> Retrieve data on DeFi protocols and blockchains using plain english!
+>
+> Here's how to use it 👇 https://t.co/l6W86r2898
+
+- **Tweet:** https://x.com/0xKofi/status/1669360715025760257
+- **What:** DefiLlama ChatGPT plugin for retrieving DeFi protocol and blockchain data using natural language.
+
+## @wacy_time1 - 5 AI Chrome Extensions
+> 🧵 1/ It may sound crazy, but I trusted AI with my investment and it paid off big time.
+>
+> ChatGPT has been dethroned, here are the real game-changers.
+>
+> 5 free AI Chrome extensions that'll improve your productivity and crypto research by 10x ⬇️
+>
+> 1️⃣ @Glarity_summary - Any article or lengthy thread will take you about 20 seconds to read.
+>
+> The tool features:
+> • Create a concise summary
+> • Highlight key points
+> • Use a Q&A format
+> • Translate results into various languages
+>
+> 2️⃣ @_Glasp YouTube Summary - Say goodbye to watching full-length videos.
+>
+> The tool features:
+> • Generate video summaries in text format
+> • Divide videos into timecodes with descriptions
+> • Open the results immediately in ChatGPT
+> • Translate into any language
+>
+> 3️⃣ @scispace_ - If you require a comprehensive analysis of the information but struggle to comprehend certain aspects, this tool is prepared to clarify everything in straightforward terms with just two clicks.
+>
+> 4️⃣ @Wiseone_io - When reading articles, certain terms may be unclear and require a comprehensive explanation. Wiseone achieves this effortlessly with just a couple of clicks.
+>
+> 5️⃣ Twemex - Additional Sidebar for Twitter enabling analysis of popular tweets and threads from individual accounts or entire Twitter Lists. Makes it 100 times easier to find the right threads.
+> (the link to the extension is here @Links_by_Wacy)
+>
+> 📹 Allow me to showcase the functionality of all tools in short videos ⬇️
+
+- **Tweet:** https://x.com/wacy_time1/status/1663910129270497282
+- **What:** 5 free AI Chrome extensions for productivity and crypto research: Glarity, Glasp YouTube Summary, scispace, Wiseone, and Twemex.
+
+## @StevenMatcha - Avocado Gas Drop
+> Have you received an Avocado Gas Drop from @instadapp ? Most recently we collaborated with @AlphaInsiders and airdropped over $70,000 in Gas Credits!
+>
+> Here is your MEGA thread to get you using Avocado like a boss 😎
+>
+> 🥑 ⭐ 🥑 ⭐🥑 ⭐🥑 ⭐🥑 ⭐🥑 ⭐🥑 ⭐🥑 ⭐🥑 ⭐ https://t.co/1ruWVE0exi
+
+- **Tweet:** https://x.com/StevenMatcha/status/1651895043333193730
+- **What:** Avocado wallet gas drop promotion with $70,000+ in gas credits from instadapp and AlphaInsiders collaboration.
+
+## @LeechProtocol - DeFi Tools Thread
+> Are you ready to master #DeFi?
+>
+> Uncover the must-have tools to navigate this world.
+>
+> Don't wait, RT it now to save it!
+>
+> A thread of useful tools for DeFi adventurers with a couple of use cases as examples.
+>
+> Mega🧵 🔄 https://t.co/ENEaRXHZDL
+
+- **Tweet:** https://x.com/LeechProtocol/status/1648292801325543430
+- **What:** Thread of essential DeFi tools for navigating the decentralized finance world with use case examples.
+
+
+## @burstingbagel - Early Stage Projects List
+> (1/14) First off, I'm a researchooor not a threadooor so here's a list of some of the most interesting early-stage projects I've come across recently and a quick TLDR on what they plan on doing. 90% of them haven't launched their product or released a token yet.
+>
+> 🧵👇
+
+- **Tweet:** https://x.com/burstingbagel/status/1547228534749270017
+- **What:** Researcher's curated list of interesting early-stage projects with TLDRs, noting 90% haven't launched products or tokens yet.
+
+## @DegenCitadel - DegenDAO Members List
+> A list of some of the DegenDAO members
+> https://t.co/tWPHozkDOF
+
+- **Tweet:** https://x.com/DegenCitadel/status/1465409683783438337
+- **Link:** https://x.com/i/lists/1453835231459307520/members
+- **What:** Twitter list of DegenDAO members for community tracking.
+
+## @officer_secret - DeFi Toolkit
+> Gm fam 🙌 Check out one of the best toolkits in #DeFi, save it so you don't forget it 😊
+>
+> https://t.co/bzjCVV57c6
+
+- **Tweet:** https://x.com/officer_secret/status/1519592000785240065
+- **Link:** https://hackmd.io/@gweicz/defi-toolkit
+- **Filed:** [defi-toolkit.md](./knowledge/articles/defi-toolkit.md)
+- **What:** Comprehensive DeFi toolkit curated for Ethereum ecosystem users, covering essential tools and resources.
+
+## @alpha_pls - Get Alpha from Crypto Twitter
+> There is so much alpha on this platform.
+>
+> You can go from $0 to $100k very quickly with just the information on Twitter alone, but you need to gain an edge.
+>
+> 6 ways to get more alpha from Crypto Twitter 🧵 https://t.co/kqRI8UEypA
+
+- **Tweet:** https://x.com/alpha_pls/status/1513186416104468484
+- **What:** Tips for gaining alpha from Crypto Twitter with 6 methods to get an edge.
+
+## @thedefiedge - Cognitive Biases in Crypto
+> I've studied hundreds of cognitive biases to become a better Crypto investor.
+>
+> Here are the 14 most important ones:
+
+- **Tweet:** https://x.com/thedefiedge/status/1490765231248838661
+- **What:** List of 14 most important cognitive biases for becoming a better crypto investor.
+
+## @DCLBlogger - Airdrop Strategy
+> Why are new companies/projects giving millions of dollars worth of free airdrops?
+>
+> Will we see more in the future?
+>
+> How do newbies get in?
+>
+> 1/ Let’s explore
+
+- **Tweet:** https://x.com/DCLBlogger/status/1475328716796411908
+- **What:** Discussion on why projects give free airdrops, future trends, and how newbies can participate.
+
+## @IvanOnTech - Web3 React Boilerplate
+> 🕸Web3 React Boilerplate
+>
+> Login with Wallet/WalletConnect
+> Show User Balances
+> Show User NFTs
+> Show User Transactions
+> Show Functioning Wallet
+>
+> https://t.co/iqIRokM0aD
+>
+> *Replying to @IvanOnTech:* Web3 Boilerplates that will save you dev-time 👇
+>
+> I've compiled my favorite boilerplates for web, mobile and game development
+>
+> Must read for web3 developers 🧵
+
+- **Tweet:** https://x.com/IvanOnTech/status/1473592638410567680
+- **Parent:** https://x.com/IvanOnTech/status/1473592636711870467
+- **Link:** https://github.com/ethereum-boilerplate/ethereum-boilerplate
+- **Filed:** [ethereum-boilerplate.md](./knowledge/tools/ethereum-boilerplate.md)
+- **What:** Web3 React boilerplate with wallet integration, balances, NFTs, transactions, and functioning wallet components.
+
+## @astralwave - Product Development Constraints
+> A simple explanation for why "estimations" and timeline-based "roadmaps" don't work, is that product development isn't a scheduling problem but an explore/exploit problem.
+>
+> Time isn't the constraint, but knowledge.
+>
+> Knowledge that isn't currently "priced in" to the market.
+
+- **Tweet:** https://x.com/astralwave/status/1249136929825849347
+- **What:** Insight that product development is an explore/exploit problem, not scheduling - knowledge, not time, is the constraint.
+
+
+## @unifiprotocol - UNFI BSC Staking Event
+> 📢Stake $UNFI on Binance Smart Chain(BSC) and get staking rewards with every new block mined.
+>
+> ➡️25,000 UNFI Staking Rewards to be Mined  🔥🔥🔥
+>
+> https://t.co/O85vDC1ikt https://t.co/OCxGJ63vPS
+
+- **Tweet:** https://x.com/unifiprotocol/status/1329176303312912384
+- **Link:** https://medium.com/unifiprotocol/unfi-binance-smart-chain-staking-event-fc94414e3dc1
+- **Filed:** [unfi-binance-staking.md](./knowledge/articles/unfi-binance-staking.md)
+- **What:** UNFI staking event on Binance Smart Chain with 25,000 UNFI rewards distributed per block mined.
+
 # Saturday, January 3, 2026
 
 ## @hayesdev_ - Claude Skills Setup Guide
