@@ -1,6 +1,152 @@
 # Sunday, January 4, 2026
 
-## @wacy_time1 - 5 Free AI Chrome Extensions for Productivity & Crypto Research
+## @alpha_pls - 6 Ways to Get More Alpha from Crypto Twitter
+> There is so much alpha on this platform.
+>
+> You can go from $0 to $100k very quickly with just the information on Twitter alone, but you need to gain an edge.
+>
+> 6 ways to get more alpha from Crypto Twitter 🧵
+
+- **Tweet:** https://x.com/alpha_pls/status/1513186416104468484
+- **What:** A thread exploring 6 strategies for discovering and leveraging alpha (unique insights) from Crypto Twitter to accelerate wealth building from zero to six figures.
+
+---
+
+## @thedefiedge - 14 Cognitive Biases for Crypto Investing
+> I've studied hundreds of cognitive biases to become a better Crypto investor.
+>
+> Here are the 14 most important ones:
+
+- **Tweet:** https://x.com/thedefiedge/status/1490765231248838661
+- **What:** Educational thread identifying the 14 most critical cognitive biases that impact cryptocurrency investment decisions, based on extensive research.
+
+---
+
+## @DCLBlogger - Why Projects Give Millions in Free Airdrops
+> Why are new companies/projects giving millions of dollars worth of free airdrops?
+>
+> Will we see more in the future?
+>
+> How do newbies get in?
+>
+> 1/ Let's explore
+
+- **Tweet:** https://x.com/DCLBlogger/status/1475328716796411908
+- **What:** Thread explaining the strategic reasons projects give millions in airdrops, discussing future trends, and providing guidance for newcomers to participate.
+
+---
+
+## @IvanOnTech - Ethereum Web3 React Boilerplate
+> 🕸Web3 React Boilerplate
+>
+> Login with Wallet/WalletConnect
+> Show User Balances
+> Show User NFTs
+> Show User Transactions
+> Show Functioning Wallet
+
+- **Tweet:** https://x.com/IvanOnTech/status/1473592638410567680
+- **Link:** https://github.com/ethereum-boilerplate/ethereum-boilerplate
+- **What:** NextJS Ethereum dApp boilerplate using Moralis SDK with wallet authentication, balance displays, NFT listings, transaction history, and functional wallet features. Works with any EVM chain and Solana.
+
+---
+
+## @astralwave - Product Development as an Explore/Exploit Problem
+> A simple explanation for why "estimations" and timeline-based "roadmaps" don't work, is that product development isn't a scheduling problem but an explore/exploit problem.
+>
+> Time isn't the constraint, but knowledge.
+>
+> Knowledge that isn't currently "priced in" to the market.
+
+- **Tweet:** https://x.com/astralwave/status/1249136929825849347
+- **What:** Insight that product development challenges stem from knowledge gaps rather than time constraints, making traditional timelines and roadmaps ineffective without accounting for discovery and exploration phases.
+
+---
+
+## @supermemory - Install-MCP CLI for OpenCode
+> Install MCP now supports @opencode
+>
+> 𝚋𝚞𝚗𝚒 𝚒𝚗𝚜𝚝𝚊-𝚖𝚌𝚙 𝚑𝚝𝚝𝚙://𝚖𝚌𝚙.𝚜𝚞𝚖𝚎/𝚖𝚌𝚙 --𝚌𝚕𝚒𝚒𝚒𝚗 𝚘𝚙𝚎𝚗𝚌𝚘𝚍𝚎
+> - handles auth across clients
+> - deals with the different config schemas (so you dont have to)
+
+- **Tweet:** https://x.com/supermemory/status/2007565682754625805
+- **Link:** https://github.com/supermemoryai/install-mcp
+- **Filed:** [install-mcp.md](./knowledge/tools/install-mcp.md)
+- **What:** Simple CLI to install MCP servers into any client with auth handling, supporting package names, scoped packages, full commands, and remote URLs with automatic detection and naming.
+
+---
+
+## @banteg - Takopi v0.6.0 Interactive Onboarding
+> takopi v0.6.0 now has interactive onboarding
+>
+> takopi walks you through:
+> - creating a telegram bot
+> - detecting your chat id automatically
+> - picking your default agent
+>
+> no more manual config editing
+
+- **Tweet:** https://x.com/banteg/status/2007523410256244882
+- **What:** Takopi v0.6.0 update introduces interactive onboarding that guides users through creating Telegram bots, auto-detecting chat IDs, and selecting default agents—eliminating manual config editing.
+
+---
+
+## @AlexFinn - Claude Code Context Management Tips
+> 🔶Load up your context
+>
+> CC's context management has gotten MASSIVE improvements in last few weeks
+>
+> It now compacts intelligently, allowing you to keep context for a LONG time
+>
+> Don't be afraid to load context by having CC review your architecture at the beginning of sessions
+
+- **Tweet:** https://x.com/AlexFinn/status/2007585397300441204
+- **Parent:** https://x.com/AlexFinn/status/2007585395551387992
+- **What:** Two Claude Code tips: 1) Connect to Git early for full commit history access, and 2) Load context at session start by having CC review your architecture—intelligent compaction now allows keeping context for extended periods.
+
+---
+
+## @irl_danB - OpenProse: A New Kind of Computer
+> "Wow."
+>
+> the OpenProse VM is a new kind of computer
+>
+> try it in 30 seconds:
+>
+> https://www.prose.md/
+>
+> install skill (no code, no dependencies) in Claude Code, Opencode, Amp, Codex
+>
+> restart to load skill
+>
+> `openprose boot`
+>
+> onboarding is built in, it should hold your hand from there
+
+- **Tweet:** https://x.com/irl_danB/status/2007595082229395519
+- **Link:** https://www.prose.md/
+- **Filed:** [openprose.md](./knowledge/articles/openprose.md)
+- **What:** OpenProse treats AI sessions as Turing-complete computers with a new programming language that structures English into unambiguous control flow. Available as a skill for Claude Code, OpenCode, Amp, and Codex with built-in onboarding.
+
+---
+
+## @captainsafia - Burrow v1.3.0 Directory-Scoped Secrets
+> burrow v1.3.0 is out ✨
+>
+> Secrets now autoload per-directory (direnv-style), so the right values are always in scope and never committed.
+
+>
+> 🐰 : https://t.co/KCWLE63F2l https://t.co/dviHVP8vpm
+
+- **Tweet:** https://x.com/captainsafia/status/2007215212932350165
+- **Link:** https://github.com/captainsafia/burrow/releases/tag/v1.3.0
+- **Filed:** [burrow.md](./knowledge/tools/burrow.md)
+- **What:** TypeScript tool for per-directory secret management with direnv-style inheritance. Secrets autoload per directory, export to multiple shell formats, support for blocking inheritance, and safe by default (stored outside git repos).
+
+---
+
+## @wacy_time1 - 5 Free AI Chrome Extensions## @wacy_time1 - 5 Free AI Chrome Extensions for Productivity & Crypto Research
 > 🧵 1/ It may sound crazy, but I trusted AI with my investment and it paid off big time.
 > 
 > ChatGPT has been dethroned, here are real game-changers.
