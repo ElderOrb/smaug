@@ -1,5 +1,140 @@
 # Sunday, January 4, 2026
 
+## @alexhillman - Bookmark Gang's Lightning Speed
+> bookmark gang does not fuck around 😂
+>
+> this is in less than 12 hrs.
+
+- **Tweet:** https://x.com/alexhillman/status/2007136609007968482
+- **What:** A lighthearted celebration of the rapid pace at which the bookmark community processes and archives bookmarks—over 5 processed in under 12 hours.
+
+---
+
+## @cloudxdev - Universal Claude Code Workflow Plugin Starter
+> I have published the whole agents, skills, commands, hooks files that I use as a "project-starter".
+>
+> Check it out
+
+- **Tweet:** https://x.com/cloudxdev/status/2006552219186008291
+- **Link:** https://github.com/CloudAI-X/claude-workflow-v2
+- **Filed:** [claude-workflow-v2.md](./knowledge/tools/claude-workflow-v2.md)
+- **What:** Open-source Claude Code plugin with 7 AI agents (orchestrator, code-reviewer, debugger, docs-writer, security-auditor, refactorer, test-architect), 6 skills, and 8 automation hooks. Works as a project starter template for any software project.
+
+---
+
+## @alexhillman - JFDI System for Claude Code (Full Demo)
+> Realizing that most people joining my lil ai exec assistant party haven't seen the full demo of the JFDI system that I built around Claude Code.
+>
+> Here's the initial walk-thru i recorded a couple of weeks back. I'll do some more updated videos when we are back from the holiday break, since I've been building exclusively on mobile (and from within the JFDI system itself) since Christmas day.
+
+- **Tweet:** https://x.com/alexhillman/status/2005316274042089964
+- **Link:** https://www.youtube.com/watch?v=yjO9UHIunSE
+- **Filed:** [jfdi-system-claude-code-demo.md](./knowledge/videos/jfdi-system-claude-code-demo.md)
+- **What:** Comprehensive demo of JFDI (Just F***ing Do It) - an AI executive assistant system built around Claude Code for mobile-first development. Alex has been using it exclusively since Christmas for building projects entirely from mobile.
+
+---
+
+## @hasantoxr - Convert YouTube Videos to Mastery Plans with Grok
+> BREAKING: I stopped watching 2-hour YouTube tutorials.
+>
+> Grok now turns any video into a step-by-step skill plan.
+>
+> Here are 8 prompts that convert videos into mastery:
+
+- **Tweet:** https://x.com/hasantoxr/status/2006351230151585805
+- **What:** Practical prompts for using Grok to convert long-form YouTube videos into structured, step-by-step skill development plans—eliminating the need to watch full tutorials while extracting actionable learning.
+
+---
+
+## @cloudxdev - Multi-Agent Claude Code Workflow Plugin
+> The Claude Code plugin that gives you 7 AI agents (code reviewer, debugger, security auditor, etc.), 6 skills, and 8 automation hooks.
+>
+> Here's how to use it:
+>
+> 1. Open your terminal
+> 2. Clone the repo: git clone https://github.com/CloudAI-X/claude-workflow-v2
+> 3. Run Claude with the plugin: claude --plugin-dir ./claude-workflow
+>
+> That's it! Claude will now automatically use the right agent based on what you ask it to do.
+
+- **Tweet:** https://x.com/cloudxdev/status/2006671601178153444
+- **Link:** https://github.com/CloudAI-X/claude-workflow-v2
+- **Filed:** [claude-workflow-v2.md](./knowledge/tools/claude-workflow-v2.md)
+- **What:** Complete walkthrough for installing the universal Claude Code workflow plugin that automatically spawns the right specialized agent for your task, with 7 subagents, 6 domain-specific skills, and 8 automation hooks for full project lifecycle support.
+
+---
+
+## @StevenMatcha - Instadapp Avocado Gas Drop Guide
+> Have you received an Avocado Gas Drop from @instadapp ? Most recently we collaborated with @AlphaInsiders and airdropped over $70,000 in Gas Credits!
+>
+> Here is your MEGA thread to get you using Avocado like a boss 😎
+>
+> 🥑 ⭐ 🥑 ⭐🥑 ⭐🥑 ⭐🥑 ⭐🥑 ⭐🥑 ⭐🥑 ⭐🥑 ⭐
+
+- **Tweet:** https://x.com/StevenMatcha/status/1651895043333193730
+- **Link:** https://x.com/StevenMatcha/status/1651895043333193730/photo/1
+- **What:** A thread guide about Instadapp's Avocado gas drop program, which collaborated with AlphaInsiders to airdrop over $70,000 in gas credits, teaching users how to use Avocado effectively.
+
+---
+
+## @LeechProtocol - DeFi Tools Thread
+> Are you ready to master #DeFi?
+>
+> Uncover the must-have tools to navigate this world.
+>
+> Don't wait, RT it now to save it!
+>
+> A thread of useful tools for DeFi adventurers with a couple of use cases as examples.
+> Mega🧵 🔄
+
+- **Tweet:** https://x.com/LeechProtocol/status/1648292801325543430
+- **Link:** https://x.com/LeechProtocol/status/1648292801325543430/photo/1
+- **What:** A comprehensive thread sharing essential DeFi tools for navigating decentralized finance, with practical use case examples for beginners and experienced users alike.
+
+---
+
+## @burstingbagel - Early-Stage Crypto Projects Research
+> (1/14) First off, I'm a researchooor not a threadooor so here's a list of some of most interesting early-stage projects I've come across recently and a quick TLDR on what they plan on doing. 90% of them haven't launched their product or released a token yet.
+>
+> 🧵👇
+
+- **Tweet:** https://x.com/burstingbagel/status/1547228534749270017
+- **What:** A researcher shares insights on promising early-stage crypto projects, noting that most haven't launched products or tokens yet, providing a valuable preview of upcoming innovations in the space.
+
+---
+
+## @DegenCitadel - DegenDAO Members List
+> A list of some of DegenDAO members
+> https://t.co/tWPHozkDOF
+
+- **Tweet:** https://x.com/DegenCitadel/status/1465409683783438337
+- **Link:** https://x.com/i/lists/1453835231459307520/members
+- **What:** A Twitter list containing members of DegenDAO community, useful for following DegenDAO participants and their activities.
+
+---
+
+## @officer_secret - DeFi Toolkit by @gweica
+> Gm fam 🙌 Check out one of the best toolkits in #DeFi, save it so you don't forget it 😊
+>
+> https://t.co/bzjCVV57c6
+
+- **Tweet:** https://x.com/officer_secret/status/1519592000785240065
+- **Link:** https://hackmd.io/@gweicz/defi-toolkit
+- **What:** Curated list of best tools and resources for users of the Ethereum DeFi ecosystem, published on HackMD. Includes comprehensive guide to DeFi protocols, analytics tools, and risk management resources.
+
+---
+
+## @unifiprotocol - UNFI Binance Smart Chain Staking Rewards
+> Stake $UNFI on Binance Smart Chain(BSC) and get staking rewards with every new block mined.
+>
+> 25,000 UNFI Staking Rewards to be Mined
+
+- **Tweet:** https://x.com/unifiprotocol/status/1329176303312912384
+- **Link:** https://medium.com/unifiprotocol/unfi-binance-smart-chain-staking-event-fc94414e3dc1
+- **What:** Announcement of a Unifi Protocol staking event on Binance Smart Chain offering 25,000 UNFI tokens as staking rewards distributed per block mined.
+
+---
+
 ## @adocomplete - Advent of Claude Day 30 - Language Server Protocol
 > Advent of Claude Day 30 - LSP
 >
