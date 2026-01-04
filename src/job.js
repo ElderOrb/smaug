@@ -73,6 +73,9 @@ async function invokeClaudeCode(config, bookmarkCount, options = {}) {
 
   let claudePath = 'claude';
   const possiblePaths = [
+    path.join(process.env.APPDATA || '', 'Roaming', 'npm', 'claude.cmd'),
+    path.join(process.env.LOCALAPPDATA || '', 'npm', 'claude.cmd'),
+    path.join(process.env.USERPROFILE || '', 'AppData', 'Roaming', 'npm', 'claude.cmd'),
     path.join(process.env.LOCALAPPDATA || '', 'Programs', 'claude.exe'),
     path.join(process.env.PROGRAMFILES || '', 'Claude', 'claude.exe'),
     path.join(process.env.USERPROFILE || '', 'AppData', 'Local', 'Programs', 'claude.exe'),
