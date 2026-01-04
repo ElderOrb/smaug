@@ -138,6 +138,23 @@ async function invokeClaudeCode(config, bookmarkCount, options = {}) {
 
     const apiKey = config.anthropicApiKey || process.env.ANTHROPIC_API_KEY;
 
+    // ===================== EXTREME DEBUG =====================
+    console.error('\n=== SPAWN DEBUG INFO ===');
+    console.error('Claude Path:', claudePath);
+    console.error('Claude Path Type:', typeof claudePath);
+    console.error('Claude Path Exists?', fs.existsSync(claudePath));
+    console.error('Args:', JSON.stringify(args, null, 2));
+    console.error('Args Count:', args.length);
+    console.error('Working Dir:', config.projectRoot || process.cwd());
+    console.error('Working Dir Exists?', fs.existsSync(config.projectRoot || process.cwd()));
+    console.error('Platform:', process.platform);
+    console.error('PATH Length:', enhancedPath.length);
+    console.error('PATH First 200 chars:', enhancedPath.substring(0, 200) + '...');
+    console.error('Node Version:', process.version);
+    console.error('ENV PATH Length:', (process.env.PATH || '').length);
+    console.error('=== END DEBUG INFO ===\n');
+    // =====================================================
+
     const proc = spawn(claudePath, args, {
       cwd: config.projectRoot || process.cwd(),
       env: {
@@ -145,7 +162,8 @@ async function invokeClaudeCode(config, bookmarkCount, options = {}) {
         PATH: enhancedPath,
         ...(apiKey ? { ANTHROPIC_API_KEY: apiKey } : {})
       },
-      stdio: ['inherit', 'pipe', 'pipe']
+      stdio: ['inherit', 'pipe', 'pipe'],
+      shell: process.platform === 'win32'
     });
 
     let stdout = '';
