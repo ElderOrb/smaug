@@ -12,7 +12,7 @@
  * - Any other scheduler
  */
 
-import { execSync, spawn } from 'child_process';
+import { spawn } from 'child_process';
 import fs from 'fs';
 import path from 'path';
 import os from 'os';
@@ -31,9 +31,9 @@ function acquireLock() {
     try {
       const { pid, timestamp } = JSON.parse(fs.readFileSync(LOCK_FILE, 'utf8'));
       try {
-        process.kill(pid, 0); // Check if process exists
+        process.kill(pid, 0);
         const age = Date.now() - timestamp;
-        if (age < 20 * 60 * 1000) { // 20 minute timeout
+        if (age < 20 * 60 * 1000) {
           console.log(`[${JOB_NAME}] Previous run still in progress (PID ${pid}). Skipping.`);
           return false;
         }
@@ -42,7 +42,6 @@ function acquireLock() {
         console.log(`[${JOB_NAME}] Removing stale lock (PID ${pid} no longer running)`);
       }
     } catch (e) {
-      // Invalid lock file
     }
     fs.unlinkSync(LOCK_FILE);
   }
@@ -66,17 +65,17 @@ function releaseLock() {
 // ============================================================================
 
 async function invokeClaudeCode(config, bookmarkCount, options = {}) {
-  const timeout = config.claudeTimeout || 900000; // 15 minutes default
-  const model = config.claudeModel || 'sonnet'; // or 'haiku' for faster/cheaper
+  const timeout = config.claudeTimeout || 900000;
+  const model = config.claudeModel || 'sonnet';
   const trackTokens = options.trackTokens || false;
 
-  // Specific tool permissions instead of full YOLO mode
-  // Task is needed for parallel subagent processing
   const allowedTools = config.allowedTools || 'Read,Write,Edit,Glob,Grep,Bash,Task,TodoWrite';
 
-  // Find claude binary - check common locations
   let claudePath = 'claude';
   const possiblePaths = [
+    path.join(process.env.LOCALAPPDATA || '', 'Programs', 'claude.exe'),
+    path.join(process.env.PROGRAMFILES || '', 'Claude', 'claude.exe'),
+    path.join(process.env.USERPROFILE || '', 'AppData', 'Local', 'Programs', 'claude.exe'),
     '/usr/local/bin/claude',
     '/opt/homebrew/bin/claude',
     path.join(process.env.HOME || '', '.local/bin/claude'),
@@ -88,18 +87,8 @@ async function invokeClaudeCode(config, bookmarkCount, options = {}) {
       break;
     }
   }
-  // Also check via which if we haven't found it
-  if (claudePath === 'claude') {
-    try {
-      claudePath = execSync('which claude', { encoding: 'utf8' }).trim() || 'claude';
-    } catch {
-      // which failed, stick with 'claude'
-    }
-  }
 
-  // Dramatic dragon reveal with fire animation
   const showDragonReveal = async (totalBookmarks) => {
-    // Fire animation for 1.5 seconds
     process.stdout.write('\n');
     const fireFramesIntro = ['🔥', '🔥🔥', '🔥🔥🔥', '🔥🔥🔥🔥', '🔥🔥🔥🔥🔥'];
     for (let i = 0; i < 10; i++) {
@@ -108,19 +97,18 @@ async function invokeClaudeCode(config, bookmarkCount, options = {}) {
       await new Promise(r => setTimeout(r, 150));
     }
 
-    // Clear and reveal
     process.stdout.write('\r                    \r');
     process.stdout.write(`  Wait... that's not Claude... it's
 
-  🔥  🔥  🔥  🔥  🔥  🔥  🔥  🔥  🔥  🔥  🔥  🔥
-       _____ __  __   _   _   _  ____
-      / ____|  \\/  | / \\ | | | |/ ___|
-      \\___ \\| |\\/| |/ _ \\| | | | |  _
-       ___) | |  | / ___ \\ |_| | |_| |
-      |____/|_|  |_/_/  \\_\\___/ \\____|
+   🔥  🔥  🔥  🔥  🔥  🔥  🔥  🔥  🔥  🔥  🔥  🔥
+        _____ __  __   _   _   _  ____
+       / ____|  \/  | / \ | | | |/ ___|
+       \___ \| |\/| |/ _ \| | | | |  _
+        ___) | |  | / ___ \ |_| | |_| |
+       |____/|_|  |_/_/  \_\___/ \____|
 
-  🐉 The dragon stirs... ${totalBookmarks} treasure${totalBookmarks !== 1 ? 's' : ''} to hoard!
-`);
+   🐉 The dragon stirs... ${totalBookmarks} treasure${totalBookmarks !== 1 ? 's' : ''} to hoard!
+ `);
   };
 
   await showDragonReveal(bookmarkCount);
@@ -136,7 +124,6 @@ async function invokeClaudeCode(config, bookmarkCount, options = {}) {
       `Process the ${bookmarkCount} bookmark(s) in ./.state/pending-bookmarks.json following the instructions in ./.claude/commands/process-bookmarks.md. Read that file first, then process each bookmark.`
     ];
 
-    // Ensure PATH includes common node locations for the claude shebang
     const nodePaths = [
       '/usr/local/bin',
       '/opt/homebrew/bin',
@@ -144,11 +131,8 @@ async function invokeClaudeCode(config, bookmarkCount, options = {}) {
       path.join(process.env.HOME || '', '.local/bin'),
       path.join(process.env.HOME || '', '.bun/bin'),
     ];
-    const enhancedPath = [...nodePaths, process.env.PATH || ''].join(':');
+    const enhancedPath = [...nodePaths, process.env.PATH || ''].join(path.delimiter);
 
-    // Get ANTHROPIC_API_KEY from config or env only
-    // Note: Don't parse from ~/.zshrc - OAuth tokens (sk-ant-oat01-*) might be
-    // incorrectly stored there and would override valid OAuth credentials
     const apiKey = config.anthropicApiKey || process.env.ANTHROPIC_API_KEY;
 
     const proc = spawn(claudePath, args, {
@@ -168,12 +152,10 @@ async function invokeClaudeCode(config, bookmarkCount, options = {}) {
     let bookmarksProcessed = 0;
     let totalBookmarks = bookmarkCount;
 
-    // Track parallel tasks
-    const parallelTasks = new Map(); // taskId -> { description, startTime, status }
+    const parallelTasks = new Map();
     let tasksSpawned = 0;
     let tasksCompleted = 0;
 
-    // Token usage tracking
     const tokenUsage = {
       input: 0,
       output: 0,
@@ -185,7 +167,6 @@ async function invokeClaudeCode(config, bookmarkCount, options = {}) {
       subagentModel: null
     };
 
-    // Helper to format time elapsed
     const startTime = Date.now();
     const elapsed = () => {
       const ms = Date.now() - startTime;
@@ -193,7 +174,6 @@ async function invokeClaudeCode(config, bookmarkCount, options = {}) {
       return secs < 60 ? `${secs}s` : `${Math.floor(secs/60)}m ${secs%60}s`;
     };
 
-    // Progress bar helper
     const progressBar = (current, total, width = 20) => {
       const pct = Math.min(current / total, 1);
       const filled = Math.round(pct * width);
@@ -202,7 +182,6 @@ async function invokeClaudeCode(config, bookmarkCount, options = {}) {
       return `[${bar}] ${current}/${total}`;
     };
 
-    // Dragon status messages
     const dragonSays = [
       '🐉 *sniff sniff* Fresh bookmarks detected...',
       '🔥 Breathing fire on these tweets...',
@@ -214,10 +193,8 @@ async function invokeClaudeCode(config, bookmarkCount, options = {}) {
     let dragonMsgIndex = 0;
     const nextDragonMsg = () => dragonSays[dragonMsgIndex++ % dragonSays.length];
 
-    // Track one-time messages to avoid duplicates
     const shownMessages = new Set();
 
-    // Animated fire spinner with rotating dragon messages
     const fireFrames = [
       '  🔥    ',
       ' 🔥🔥   ',
@@ -251,7 +228,6 @@ async function invokeClaudeCode(config, bookmarkCount, options = {}) {
     let spinnerActive = true;
     let currentSpinnerMsg = spinnerMessages[0];
 
-    // Change message every 10 seconds
     const msgInterval = setInterval(() => {
       if (!spinnerActive) return;
       spinnerMsgFrame = (spinnerMsgFrame + 1) % spinnerMessages.length;
@@ -263,23 +239,19 @@ async function invokeClaudeCode(config, bookmarkCount, options = {}) {
       fireFrame = (fireFrame + 1) % fireFrames.length;
       const flame = fireFrames[fireFrame];
       const spinnerLine = `\r  ${flame} ${currentSpinnerMsg}... [${elapsed()}]`;
-      process.stdout.write(spinnerLine + '          '); // Extra spaces to clear previous longer messages
+      process.stdout.write(spinnerLine + '          ');
       lastSpinnerLine = spinnerLine;
     }, 150);
 
-    // Start the spinner with a patience message
     process.stdout.write('\n  ⏳ Dragons are patient hunters... this may take a moment.\n');
     lastSpinnerLine = '  🔥     Processing...';
     process.stdout.write(lastSpinnerLine);
 
-    // Helper to clear spinner and print a status line
     const printStatus = (msg) => {
-      // Clear current line and print message
       process.stdout.write('\r' + ' '.repeat(60) + '\r');
       process.stdout.write(msg);
     };
 
-    // Helper to stop spinner completely
     const stopSpinner = () => {
       spinnerActive = false;
       clearInterval(spinnerInterval);
@@ -287,36 +259,29 @@ async function invokeClaudeCode(config, bookmarkCount, options = {}) {
       process.stdout.write('\r' + ' '.repeat(60) + '\r');
     };
 
-    // Buffer for incomplete JSON lines
     let lineBuffer = '';
 
     proc.stdout.on('data', (data) => {
       const text = data.toString();
       stdout += text;
 
-      // Handle streaming data that may split across chunks
       lineBuffer += text;
       const lines = lineBuffer.split('\n');
-      // Keep the last incomplete line in the buffer
       lineBuffer = lines.pop() || '';
 
-      // Parse streaming JSON and extract progress info
       for (const line of lines) {
         if (!line.trim()) continue;
 
-        // Skip lines that don't look like JSON events
         if (!line.startsWith('{')) continue;
 
         try {
           const event = JSON.parse(line);
 
-          // Show assistant text as it streams (filtered)
           if (event.type === 'assistant' && event.message?.content) {
             for (const block of event.message.content) {
               if (block.type === 'text' && block.text !== lastText) {
                 const newPart = block.text.slice(lastText.length);
                 if (newPart && newPart.length > 50) {
-                  // Only show final summaries
                   if (newPart.includes('Processed') && newPart.includes('bookmark')) {
                     process.stdout.write(`\n💬 ${newPart.trim().slice(0, 200)}${newPart.length > 200 ? '...' : ''}\n`);
                   }
@@ -324,7 +289,6 @@ async function invokeClaudeCode(config, bookmarkCount, options = {}) {
                 lastText = block.text;
               }
 
-              // Track tool usage
               if (block.type === 'tool_use') {
                 const toolName = block.name;
                 const input = block.input || {};
@@ -363,7 +327,6 @@ async function invokeClaudeCode(config, bookmarkCount, options = {}) {
                   }
                 } else if (toolName === 'Task') {
                   const desc = input.description || `batch ${tasksSpawned + 1}`;
-                  // Only count if we haven't seen this task description
                   const taskKey = `task-${desc}`;
                   if (!parallelTasks.has(taskKey)) {
                     tasksSpawned++;
@@ -387,11 +350,9 @@ async function invokeClaudeCode(config, bookmarkCount, options = {}) {
             }
           }
 
-          // Track task completions from tool results
           if (event.type === 'user' && event.message?.content) {
             for (const block of event.message.content) {
               if (block.type === 'tool_result' && !block.is_error && block.tool_use_id) {
-                // Check if this looks like a Task completion and we haven't counted it
                 const content = typeof block.content === 'string' ? block.content : '';
                 const toolId = block.tool_use_id;
                 if ((content.includes('Processed') || content.includes('completed')) &&
@@ -408,7 +369,6 @@ async function invokeClaudeCode(config, bookmarkCount, options = {}) {
             }
           }
 
-          // Track token usage from result event
           if (event.type === 'result' && event.usage) {
             tokenUsage.input = event.usage.input_tokens || 0;
             tokenUsage.output = event.usage.output_tokens || 0;
@@ -416,18 +376,15 @@ async function invokeClaudeCode(config, bookmarkCount, options = {}) {
             tokenUsage.cacheWrite = event.usage.cache_creation_input_tokens || 0;
           }
 
-          // Track subagent token usage from Task results
           if (event.type === 'user' && event.message?.content) {
             for (const block of event.message.content) {
               if (block.type === 'tool_result' && block.content) {
-                // Try to parse subagent usage from result
                 const content = typeof block.content === 'string' ? block.content : JSON.stringify(block.content);
                 const usageMatch = content.match(/usage.*?input.*?(\d+).*?output.*?(\d+)/i);
                 if (usageMatch) {
                   tokenUsage.subagentInput += parseInt(usageMatch[1], 10);
                   tokenUsage.subagentOutput += parseInt(usageMatch[2], 10);
                 }
-                // Detect subagent model from content
                 if (!tokenUsage.subagentModel && content.includes('haiku')) {
                   tokenUsage.subagentModel = 'haiku';
                 } else if (!tokenUsage.subagentModel && content.includes('sonnet')) {
@@ -437,11 +394,9 @@ async function invokeClaudeCode(config, bookmarkCount, options = {}) {
             }
           }
 
-          // Show result summary
           if (event.type === 'result') {
             stopSpinner();
 
-            // Randomized hoard descriptions by size tier
             const hoardDescriptions = {
               small: [
                 'A Few Coins',
@@ -470,10 +425,8 @@ async function invokeClaudeCode(config, bookmarkCount, options = {}) {
             const descriptions = hoardDescriptions[tier];
             const hoardStatus = descriptions[Math.floor(Math.random() * descriptions.length)];
 
-            // Build token usage display if tracking enabled
             let tokenDisplay = '';
             if (trackTokens && (tokenUsage.input > 0 || tokenUsage.output > 0)) {
-              // Pricing per million tokens (as of 2024)
               const pricing = {
                 'sonnet': { input: 3.00, output: 15.00, cacheRead: 0.30, cacheWrite: 3.75 },
                 'haiku': { input: 0.25, output: 1.25, cacheRead: 0.025, cacheWrite: 0.30 },
@@ -483,7 +436,6 @@ async function invokeClaudeCode(config, bookmarkCount, options = {}) {
               const mainPricing = pricing[tokenUsage.model] || pricing.sonnet;
               const subPricing = pricing[tokenUsage.subagentModel || tokenUsage.model] || mainPricing;
 
-              // Calculate costs
               const mainInputCost = (tokenUsage.input / 1_000_000) * mainPricing.input;
               const mainOutputCost = (tokenUsage.output / 1_000_000) * mainPricing.output;
               const cacheReadCost = (tokenUsage.cacheRead / 1_000_000) * mainPricing.cacheRead;
@@ -497,47 +449,46 @@ async function invokeClaudeCode(config, bookmarkCount, options = {}) {
               const formatCost = (c) => c < 0.01 ? '<$0.01' : `$${c.toFixed(2)}`;
 
               tokenDisplay = `
-  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-  📊 TOKEN USAGE
-  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-  Main (${tokenUsage.model}):
-    Input:       ${formatNum(tokenUsage.input).padStart(10)} tokens  ${formatCost(mainInputCost)}
-    Output:      ${formatNum(tokenUsage.output).padStart(10)} tokens  ${formatCost(mainOutputCost)}
-    Cache Read:  ${formatNum(tokenUsage.cacheRead).padStart(10)} tokens  ${formatCost(cacheReadCost)}
-    Cache Write: ${formatNum(tokenUsage.cacheWrite).padStart(10)} tokens  ${formatCost(cacheWriteCost)}
-${tokenUsage.subagentInput > 0 || tokenUsage.subagentOutput > 0 ? `
-  Subagents (${tokenUsage.subagentModel || 'unknown'}):
-    Input:       ${formatNum(tokenUsage.subagentInput).padStart(10)} tokens  ${formatCost(subInputCost)}
-    Output:      ${formatNum(tokenUsage.subagentOutput).padStart(10)} tokens  ${formatCost(subOutputCost)}
-` : ''}
-  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-  💰 TOTAL COST: ${formatCost(totalCost)}
-  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-`;
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   📊 TOKEN USAGE
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   Main (${tokenUsage.model}):
+     Input:       ${formatNum(tokenUsage.input).padStart(10)} tokens  ${formatCost(mainInputCost)}
+     Output:      ${formatNum(tokenUsage.output).padStart(10)} tokens  ${formatCost(mainOutputCost)}
+     Cache Read:  ${formatNum(tokenUsage.cacheRead).padStart(10)} tokens  ${formatCost(cacheReadCost)}
+     Cache Write: ${formatNum(tokenUsage.cacheWrite).padStart(10)} tokens  ${formatCost(cacheWriteCost)}
+ ${tokenUsage.subagentInput > 0 || tokenUsage.subagentOutput > 0 ? `
+   Subagents (${tokenUsage.subagentModel || 'unknown'}):
+     Input:       ${formatNum(tokenUsage.subagentInput).padStart(10)} tokens  ${formatCost(subInputCost)}
+     Output:      ${formatNum(tokenUsage.subagentOutput).padStart(10)} tokens  ${formatCost(subOutputCost)}
+ ` : ''}
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   💰 TOTAL COST: ${formatCost(totalCost)}
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ `;
             }
 
             process.stdout.write(`
 
-  🔥🔥🔥  THE DRAGON'S HOARD GROWS!  🔥🔥🔥
+   🔥🔥🔥  THE DRAGON'S HOARD GROWS!  🔥🔥🔥
 
-              🐉
-            /|  |\\
-           / |💎| \\      Victory!
-          /  |__|  \\
-         /  /    \\  \\
-        /__/  💰  \\__\\
+               🐉
+             /|  |\\
+            / |💎| \\      Victory!
+           /  |__|  \\
+          /  /    \\  \\
+         /__/  💰  \\__\\
 
-  ⏱️  Quest Duration:  ${elapsed()}
-  📦  Bookmarks:       ${totalBookmarks} processed
-  🐲  Dragon Minions:  ${tasksSpawned > 0 ? tasksSpawned + ' summoned' : 'solo hunt'}
-  🏔️  Hoard Status:    ${hoardStatus}
-${tokenDisplay}
-  🐉 Smaug rests... until the next hoard arrives.
+   ⏱️  Quest Duration:  ${elapsed()}
+   📦  Bookmarks:       ${totalBookmarks} processed
+   🐲  Dragon Minions:  ${tasksSpawned > 0 ? tasksSpawned + ' summoned' : 'solo hunt'}
+   🏔️  Hoard Status:    ${hoardStatus}
+ ${tokenDisplay}
+   🐉 Smaug rests... until the next hoard arrives.
 
-`);
+ `);
           }
         } catch (e) {
-          // JSON parse failed - silently ignore (don't print raw JSON)
         }
       }
     });
@@ -647,7 +598,6 @@ async function notify(config, title, description, success = true) {
   if (config.webhookType === 'slack') {
     payload = formatSlackPayload(title, description, success);
   } else {
-    // Default to Discord format
     payload = formatDiscordPayload(title, description, success);
   }
 
@@ -665,13 +615,11 @@ export async function run(options = {}) {
 
   console.log(`[${now}] Starting smaug job...`);
 
-  // Overlap protection
   if (!acquireLock()) {
     return { success: true, skipped: true };
   }
 
   try {
-    // Check for existing pending bookmarks first
     let pendingData = null;
     let bookmarkCount = 0;
 
@@ -680,16 +628,13 @@ export async function run(options = {}) {
         pendingData = JSON.parse(fs.readFileSync(config.pendingFile, 'utf8'));
         bookmarkCount = pendingData.bookmarks?.length || 0;
       } catch (e) {
-        // Invalid pending file, will fetch fresh
       }
     }
 
-    // Phase 1: Fetch new bookmarks (merges with existing pending)
     if (bookmarkCount === 0 || options.forceFetch) {
       console.log(`[${now}] Phase 1: Fetching and preparing bookmarks...`);
       const prepResult = await fetchAndPrepareBookmarks(options);
 
-      // Re-read pending file after fetch
       if (fs.existsSync(config.pendingFile)) {
         pendingData = JSON.parse(fs.readFileSync(config.pendingFile, 'utf8'));
         bookmarkCount = pendingData.bookmarks?.length || 0;
@@ -709,10 +654,8 @@ export async function run(options = {}) {
 
     console.log(`[${now}] Processing ${bookmarkCount} bookmarks`);
 
-    // Track IDs we're about to process
     const idsToProcess = pendingData.bookmarks.map(b => b.id);
 
-    // Phase 2: Claude Code analysis (if enabled)
     if (config.autoInvokeClaude !== false) {
       console.log(`[${now}] Phase 2: Invoking Claude Code for analysis...`);
 
@@ -723,7 +666,6 @@ export async function run(options = {}) {
       if (claudeResult.success) {
         console.log(`[${now}] Analysis complete`);
 
-        // Remove processed IDs from pending file
         if (fs.existsSync(config.pendingFile)) {
           const currentData = JSON.parse(fs.readFileSync(config.pendingFile, 'utf8'));
           const processedIds = new Set(idsToProcess);
@@ -738,7 +680,6 @@ export async function run(options = {}) {
           console.log(`[${now}] Cleaned up ${idsToProcess.length} processed bookmarks, ${remaining.length} remaining`);
         }
 
-        // Send success notification
         await notify(
           config,
           'Bookmarks Processed',
@@ -755,7 +696,6 @@ export async function run(options = {}) {
         };
 
       } else {
-        // Claude failed - bookmarks stay in pending for retry
         console.error(`[${now}] Claude Code failed:`, claudeResult.error);
 
         await notify(
@@ -773,7 +713,6 @@ export async function run(options = {}) {
         };
       }
     } else {
-      // Auto-invoke disabled - just fetch
       console.log(`[${now}] Claude auto-invoke disabled. Run 'smaug process' or /process-bookmarks manually.`);
 
       return {
@@ -810,7 +749,7 @@ export async function run(options = {}) {
 
 export default {
   name: JOB_NAME,
-  interval: '*/30 * * * *', // Every 30 minutes
+  interval: '*/30 * * * *',
   timezone: 'America/New_York',
   run
 };
@@ -821,7 +760,6 @@ export default {
 
 if (process.argv[1] && process.argv[1].endsWith('job.js')) {
   run().then(result => {
-    // Exit silently - the dragon output is enough
     process.exit(result.success ? 0 : 1);
   });
 }

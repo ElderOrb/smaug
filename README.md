@@ -7,6 +7,8 @@ Archive your Twitter/X bookmarks (and/or optionally, likes) to markdown. Automat
 ## Contents
 
 - [Quick Start](#quick-start-5-minutes)
+- [Requirements](#requirements)
+- [Platform Support](#platform-support)
 - [Getting Twitter Credentials](#getting-twitter-credentials)
 - [What It Does](#what-it-does)
 - [Running](#running)
@@ -51,6 +53,70 @@ The setup wizard will:
 - Create required directories
 - Guide you through getting Twitter credentials
 - Create your config file
+
+## Requirements
+
+- **Node.js 20+** (uses native `fetch` API)
+- **bird CLI** - Twitter API wrapper (install globally)
+- **Claude Code CLI** - For bookmark analysis (optional, auto-detected)
+- **Git** - Optional, for committing changes to version control
+
+No shell utilities (curl, jq, etc.) needed - pure Node.js!
+
+## Platform Support
+
+Smaug works on all major platforms:
+
+| Platform | Status | Notes |
+|----------|--------|-------|
+| **Windows 10/11** | ✅ Fully supported | Native Node.js APIs, no shell dependencies |
+| **macOS 12+** | ✅ Fully supported | Native Node.js APIs |
+| **Linux** | ✅ Fully supported | Native Node.js APIs |
+
+### Cross-Platform Features
+
+- ✅ **No shell command dependencies** - Uses native Node.js `fetch` API
+- ✅ **Automatic path detection** - Finds Claude CLI on Windows/Mac/Linux
+- ✅ **Native HTTP handling** - Better error handling and performance
+- ✅ **Exponential retry logic** - Automatic retries with backoff for failed requests
+- ✅ **GitHub API rate limiting** - Respects API limits (5000 req/hour authenticated)
+
+### Windows-Specific Notes
+
+1. **Claude CLI Location**:
+   - Smaug automatically searches these Windows paths:
+     - `%LOCALAPPDATA%\Programs\claude.exe`
+     - `%PROGRAMFILES%\Claude\claude.exe`
+     - `%USERPROFILE%\AppData\Local\Programs\claude.exe`
+
+2. **No additional tools required**:
+   - No `curl` needed
+   - No `git` needed (unless using git automation)
+   - Works out of the box with just Node.js
+
+3. **PowerShell vs CMD**:
+   - All commands work in both PowerShell and CMD
+   - No shell-specific syntax used
+
+### Troubleshooting - Windows
+
+**"Cannot find Claude binary"**:
+```powershell
+# Check if Claude is installed
+Get-Command claude
+
+# Or manually set path in smaug.config.json:
+{
+  "claudePath": "C:\\Users\\YourName\\AppData\\Local\\Programs\\claude.exe"
+}
+```
+
+**"Bird CLI not found"**:
+- Install bird CLI globally:
+  ```powershell
+  npm install -g @steipete/bird@latest
+  ```
+- Verify installation: `bird --version`
 
 ## Manually Getting Twitter Credentials
 

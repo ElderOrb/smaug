@@ -56,15 +56,18 @@ Task(subagent_type="general-purpose", model="haiku", prompt="Process bookmark 3:
 ### Setup
 
 **Get today's date (friendly format):**
-```bash
-date +"%A, %B %-d, %Y"
+```javascript
+import dayjs from 'dayjs';
+const today = dayjs().format('dddd, MMMM D, YYYY');
 ```
 
 Use this format for date section headers (e.g., "Thursday, January 2, 2026").
 
 **Load categories from config:**
-```bash
-cat ./smaug.config.json | jq '.categories // empty'
+```javascript
+import fs from 'fs';
+const config = JSON.parse(fs.readFileSync('./smaug.config.json', 'utf8'));
+const categories = config.categories || {};
 ```
 
 If no custom categories, use the defaults from `src/config.js`.
@@ -216,23 +219,28 @@ fs.writeFileSync('./.state/pending-bookmarks.json', JSON.stringify(pending, null
 
 After all bookmarks are processed and filed, commit the changes:
 
-```bash
-# Get today's date for commit message
-DATE=$(date +"%b %-d")
+```javascript
+import { execSync } from 'child_process';
+import dayjs from 'dayjs';
 
-# Stage all bookmark-related changes
-git add bookmarks.md
-git add knowledge/
+// Get today's date for commit message
+const date = dayjs().format('MMM D');
 
-# Commit with descriptive message
-git commit -m "Process N Twitter bookmarks from $DATE
+// Stage all bookmark-related changes
+execSync('git add bookmarks.md');
+execSync('git add knowledge/');
+
+// Commit with descriptive message
+const commitMsg = `Process N Twitter bookmarks from ${date}
 
 🤖 Generated with [Claude Code](https://claude.com/claude-code)
 
-Co-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>"
+Co-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>`;
 
-# Push immediately
-git push
+execSync(`git commit -m "${commitMsg}"`);
+
+// Push immediately
+execSync('git push');
 ```
 
 Replace "N" with actual count. If any knowledge files were created, mention them in the commit message body.

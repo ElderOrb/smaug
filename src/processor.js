@@ -10,7 +10,7 @@
  * Outputs a JSON bundle for AI analysis (Claude Code, etc.)
  */
 
-import { execSync, spawn } from 'child_process';
+import { execSync } from 'child_process';
 import fs from 'fs';
 import path from 'path';
 import dayjs from 'dayjs';
@@ -21,7 +21,70 @@ import { loadConfig } from './config.js';
 dayjs.extend(utc);
 dayjs.extend(timezone);
 
-// Sites that typically require paywall bypass
+async function retryWithBackoff(fn, options = {}) {
+  const {
+    maxRetries = 3,
+    initialDelay = 1000,
+    backoffMultiplier = 2
+  } = options;
+
+  let lastError;
+
+  for (let attempt = 0; attempt < maxRetries; attempt++) {
+    try {
+      return await fn();
+    } catch (error) {
+      lastError = error;
+
+      if (error.name === 'AbortError') {
+        throw error;
+      }
+      if (error.message?.includes('404') || error.message?.includes('HTTP 404')) {
+        throw error;
+      }
+
+      if (attempt < maxRetries - 1) {
+        const delay = initialDelay * Math.pow(backoffMultiplier, attempt);
+        console.log(`  Retry ${attempt + 1}/${maxRetries} after ${delay}ms...`);
+        await new Promise(r => setTimeout(r, delay));
+      }
+    }
+  }
+
+  throw lastError;
+}
+
+const githubRateLimiter = {
+  requests: [],
+  maxRequests: 5000,
+  windowMs: 60 * 60 * 1000,
+  minDelayMs: 1000,
+
+  async acquire() {
+    const now = Date.now();
+
+    this.requests = this.requests.filter(t => now - t < this.windowMs);
+
+    if (this.requests.length >= this.maxRequests) {
+      const oldestRequest = this.requests[0];
+      const waitTime = oldestRequest + this.windowMs - now;
+      console.log(`  GitHub rate limit hit, waiting ${Math.ceil(waitTime/1000)}s...`);
+      await new Promise(r => setTimeout(r, waitTime));
+      return this.acquire();
+    }
+
+    if (this.requests.length > 0) {
+      const lastRequest = this.requests[this.requests.length - 1];
+      const timeSinceLast = now - lastRequest;
+      if (timeSinceLast < this.minDelayMs) {
+        await new Promise(r => setTimeout(r, this.minDelayMs - timeSinceLast));
+      }
+    }
+
+    this.requests.push(Date.now());
+  }
+};
+
 const PAYWALL_DOMAINS = [
   'nytimes.com',
   'wsj.com',
@@ -108,7 +171,6 @@ export function fetchFromSource(config, count = 10) {
   } else if (source === 'both') {
     const bookmarks = fetchBookmarks(config, count);
     const likes = fetchLikes(config, count);
-    // Merge and dedupe by ID
     const seen = new Set();
     const merged = [];
     for (const item of [...bookmarks, ...likes]) {
@@ -140,16 +202,23 @@ export function fetchTweet(config, tweetId) {
 }
 
 export function expandTcoLink(url, timeout = 10000) {
-  try {
-    const result = execSync(
-      `curl -Ls -o /dev/null -w '%{url_effective}' '${url}'`,
-      { encoding: 'utf8', timeout }
-    );
-    return result.trim();
-  } catch (error) {
+  return retryWithBackoff(async () => {
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), timeout);
+
+    try {
+      const response = await fetch(url, {
+        redirect: 'follow',
+        signal: controller.signal
+      });
+      return response.url;
+    } finally {
+      clearTimeout(timeoutId);
+    }
+  }, { maxRetries: 3, initialDelay: 1000 }).catch(error => {
     console.error(`Failed to expand ${url}: ${error.message}`);
     return url;
-  }
+  });
 }
 
 export function isPaywalled(url) {
@@ -172,78 +241,125 @@ function extractGitHubInfo(url) {
 }
 
 export async function fetchGitHubContent(url) {
-  const info = extractGitHubInfo(url);
-  if (!info) {
-    throw new Error('Could not parse GitHub URL');
-  }
-
-  const { owner, repo } = info;
-
-  try {
-    const apiUrl = `https://api.github.com/repos/${owner}/${repo}`;
-    const repoData = execSync(
-      `curl -sL -H "Accept: application/vnd.github.v3+json" "${apiUrl}"`,
-      { encoding: 'utf8', timeout: 15000 }
-    );
-    const repoJson = JSON.parse(repoData);
-
-    // Fetch README content
-    let readme = '';
-    try {
-      const readmeUrl = `https://api.github.com/repos/${owner}/${repo}/readme`;
-      const readmeData = execSync(
-        `curl -sL -H "Accept: application/vnd.github.v3+json" "${readmeUrl}"`,
-        { encoding: 'utf8', timeout: 15000 }
-      );
-      const readmeJson = JSON.parse(readmeData);
-      if (readmeJson.content) {
-        readme = Buffer.from(readmeJson.content, 'base64').toString('utf8');
-        if (readme.length > 5000) {
-          readme = readme.slice(0, 5000) + '\n...[truncated]';
-        }
-      }
-    } catch (e) {
-      console.log(`  No README found for ${owner}/${repo}`);
+  return retryWithBackoff(async () => {
+    const info = extractGitHubInfo(url);
+    if (!info) {
+      throw new Error('Could not parse GitHub URL');
     }
 
-    return {
-      name: repoJson.name,
-      fullName: repoJson.full_name,
-      description: repoJson.description || '',
-      stars: repoJson.stargazers_count,
-      language: repoJson.language,
-      topics: repoJson.topics || [],
-      readme,
-      url: repoJson.html_url
-    };
-  } catch (error) {
-    console.error(`  GitHub API error for ${owner}/${repo}: ${error.message}`);
-    throw error;
-  }
+    const { owner, repo } = info;
+
+    await githubRateLimiter.acquire();
+
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 15000);
+
+    try {
+      const apiUrl = `https://api.github.com/repos/${owner}/${repo}`;
+      const repoResponse = await fetch(apiUrl, {
+        headers: { 'Accept': 'application/vnd.github.v3+json' },
+        signal: controller.signal
+      });
+
+      if (!repoResponse.ok) {
+        throw new Error(`GitHub API error: ${repoResponse.status}`);
+      }
+
+      const repoJson = await repoResponse.json();
+
+      let readme = '';
+      try {
+        await githubRateLimiter.acquire();
+
+        const readmeController = new AbortController();
+        const readmeTimeoutId = setTimeout(() => readmeController.abort(), 15000);
+
+        try {
+          const readmeUrl = `https://api.github.com/repos/${owner}/${repo}/readme`;
+          const readmeResponse = await fetch(readmeUrl, {
+            headers: { 'Accept': 'application/vnd.github.v3+json' },
+            signal: readmeController.signal
+          });
+
+          if (readmeResponse.ok) {
+            const readmeJson = await readmeResponse.json();
+            if (readmeJson.content) {
+              readme = Buffer.from(readmeJson.content, 'base64').toString('utf8');
+              if (readme.length > 5000) {
+                readme = readme.slice(0, 5000) + '\n...[truncated]';
+              }
+            }
+          }
+        } finally {
+          clearTimeout(readmeTimeoutId);
+        }
+      } catch (e) {
+        console.log(`  No README found for ${owner}/${repo}`);
+      }
+
+      return {
+        name: repoJson.name,
+        fullName: repoJson.full_name,
+        description: repoJson.description || '',
+        stars: repoJson.stargazers_count,
+        language: repoJson.language,
+        topics: repoJson.topics || [],
+        readme,
+        url: repoJson.html_url
+      };
+    } finally {
+      clearTimeout(timeoutId);
+    }
+  }, { maxRetries: 3, initialDelay: 1000 });
 }
 
 export async function fetchArticleContent(url) {
-  try {
-    const result = execSync(
-      `curl -sL -m 30 -A "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)" "${url}" | head -c 50000`,
-      { encoding: 'utf8', timeout: 35000 }
-    );
+  return retryWithBackoff(async () => {
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 35000);
 
-    // Check for paywall indicators
-    if (result.includes('Subscribe') && result.includes('sign in') ||
-        result.includes('This article is for subscribers') ||
-        result.length < 1000) {
-      return { text: result, source: 'direct', paywalled: true };
+    try {
+      const response = await fetch(url, {
+        headers: { 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)' },
+        signal: controller.signal
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+      }
+
+      const reader = response.body.getReader();
+      let result = '';
+      let totalBytes = 0;
+      const maxBytes = 50000;
+
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) break;
+
+        totalBytes += value.length;
+        if (totalBytes > maxBytes) {
+          result += new TextDecoder().decode(value.slice(0, maxBytes - (totalBytes - value.length)));
+          break;
+        }
+
+        result += new TextDecoder().decode(value);
+      }
+
+      if (result.includes('Subscribe') && result.includes('sign in') ||
+          result.includes('This article is for subscribers') ||
+          result.length < 1000) {
+        return { text: result, source: 'direct', paywalled: true };
+      }
+
+      return { text: result, source: 'direct', paywalled: false };
+    } finally {
+      clearTimeout(timeoutId);
     }
-
-    return { text: result, source: 'direct', paywalled: false };
-  } catch (error) {
-    throw error;
-  }
+  }, { maxRetries: 3, initialDelay: 1000 });
 }
 
 export async function fetchContent(url, type, config) {
-  // Use GitHub API for GitHub URLs
   if (type === 'github') {
     try {
       const ghContent = await fetchGitHubContent(url);
@@ -253,7 +369,6 @@ export async function fetchContent(url, type, config) {
     }
   }
 
-  // For paywalled sites, note for manual handling or custom bypass
   if (isPaywalled(url)) {
     console.log(`  Paywalled domain detected: ${url}`);
     return {
@@ -263,7 +378,6 @@ export async function fetchContent(url, type, config) {
     };
   }
 
-  // Try direct fetch for other URLs
   return await fetchArticleContent(url);
 }
 
@@ -295,7 +409,6 @@ export async function fetchAndPrepareBookmarks(options = {}) {
     return { bookmarks: [], count: 0 };
   }
 
-  // Get IDs already processed or pending
   const existingIds = getExistingBookmarkIds(config);
   let pendingIds = new Set();
   try {
@@ -305,12 +418,10 @@ export async function fetchAndPrepareBookmarks(options = {}) {
     }
   } catch (e) {}
 
-  // Determine which tweets to process
   let toProcess;
   if (options.specificIds) {
     toProcess = tweets.filter(b => options.specificIds.includes(b.id.toString()));
   } else if (options.force) {
-    // Force mode: skip duplicate checking, process all fetched tweets
     toProcess = tweets;
   } else {
     toProcess = tweets.filter(b => {
@@ -335,15 +446,13 @@ export async function fetchAndPrepareBookmarks(options = {}) {
       const text = bookmark.text || bookmark.full_text || '';
       const author = bookmark.author?.username || bookmark.user?.screen_name || 'unknown';
 
-      // Find and expand t.co links
       const tcoLinks = text.match(/https?:\/\/t\.co\/\w+/g) || [];
       const links = [];
 
       for (const link of tcoLinks) {
-        const expanded = expandTcoLink(link);
+        const expanded = await expandTcoLink(link);
         console.log(`  Expanded: ${link} -> ${expanded}`);
 
-        // Categorize the link
         let type = 'unknown';
         let content = null;
 
@@ -356,7 +465,6 @@ export async function fetchAndPrepareBookmarks(options = {}) {
             type = 'media';
           } else {
             type = 'tweet';
-            // Quote tweet - fetch the quoted tweet for context
             const tweetIdMatch = expanded.match(/status\/(\d+)/);
             if (tweetIdMatch) {
               const quotedTweetId = tweetIdMatch[1];
@@ -380,7 +488,6 @@ export async function fetchAndPrepareBookmarks(options = {}) {
           type = 'article';
         }
 
-        // Fetch content for articles and GitHub repos
         if (type === 'article' || type === 'github') {
           try {
             const fetchResult = await fetchContent(expanded, type, config);
@@ -419,7 +526,6 @@ export async function fetchAndPrepareBookmarks(options = {}) {
         });
       }
 
-      // If this is a reply, fetch the parent tweet for context
       let replyContext = null;
       if (bookmark.inReplyToStatusId) {
         console.log(`  This is a reply to ${bookmark.inReplyToStatusId}, fetching parent...`);
@@ -435,7 +541,6 @@ export async function fetchAndPrepareBookmarks(options = {}) {
         }
       }
 
-      // Check for native quote tweet
       let quoteContext = null;
       if (bookmark.quotedTweet) {
         const qt = bookmark.quotedTweet;
@@ -449,8 +554,6 @@ export async function fetchAndPrepareBookmarks(options = {}) {
         };
       }
 
-      // Capture media attachments (photos, videos, GIFs) - EXPERIMENTAL
-      // Only included if includeMedia is true (--media flag)
       const media = configWithOptions.includeMedia ? (bookmark.media || []) : [];
 
       prepared.push({
@@ -477,7 +580,6 @@ export async function fetchAndPrepareBookmarks(options = {}) {
     }
   }
 
-  // Merge prepared bookmarks into pending file
   let existingPending = { bookmarks: [] };
   try {
     if (fs.existsSync(config.pendingFile)) {
@@ -501,7 +603,6 @@ export async function fetchAndPrepareBookmarks(options = {}) {
   fs.writeFileSync(config.pendingFile, JSON.stringify(output, null, 2));
   console.log(`\nMerged ${newBookmarks.length} new bookmarks into ${config.pendingFile} (total: ${output.count})`);
 
-  // Update state
   state.last_check = now.toISOString();
   saveState(config, state);
 
