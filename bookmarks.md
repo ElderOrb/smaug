@@ -1,5 +1,75 @@
 # Sunday, January 4, 2026
 
+## @housecor - Advent of Claude: 31 Days of Claude Code Tips Compilation
+> Last month I enjoyed "Advent of Claude: 31 Days of Claude Code".
+>
+> The author just published this single blog post with all the tips in one spot: https://t.co/b5QChuWrPh
+
+- **Tweet:** https://x.com/housecor/status/2007645358730686497
+- **Link:** https://adocomplete.com/advent-of-claude-2025/
+- **Filed:** [advent-of-claude-2025.md](./knowledge/articles/advent-of-claude-2025.md)
+- **What:** Complete compilation of 31 days of Claude Code tips and techniques in a single comprehensive guide covering shortcuts, agent patterns, and productivity workflows.
+
+## @moreconfetti - Clawdbot: Personal AI Assistant with Meal Planning Integration
+> Update on Crawdad 🦞 (my AI Assistant running on @clawdbot by @steipete )
+>
+> Tonight we built a full weekly meal planning system in Notion.
+>
+> My wife and I take turns cooking, so we had Crawdad set up:
+>
+> - Master meal plan template for all of 2026 (365 days)
+> - Shopping lists sorted by store and aisle (Kroger/Costco/Lowes)
+> - Weather forecast auto-updating on the meal plan list (helps me plan good nights for grilling, soup, etc)
+> - Our go-to recipes catalogued by chef
+>
+> - ⁠It'll remind me in morning/evening digests if I need to plan dinner or grab groceries.
+>
+> I imagine that this will save us at least an hour a week.
+>
+> https://t.co/pNS2ceeUwL
+
+- **Tweet:** https://x.com/moreconfetti/status/2007616854689280196
+- **Link:** https://github.com/clawdbot/clawdbot
+- **Filed:** [clawdbot.md](./knowledge/tools/clawdbot.md)
+- **What:** Personal AI assistant (Crawdad) built on clawdbot framework with comprehensive meal planning system, automated shopping lists, weather integration, and recipe management.
+
+## @jarrodwatts - Claude HUD: Real-time Session Monitoring Plugin for Claude Code
+> Introducing Claude HUD!
+>
+> A Claude Code plugin that shows you:
+> · context remaining in the session
+> · what tools are executing
+> · which subagents are running
+> · claude's to-do list progress
+>
+> Easy installation guide below ↓ https://t.co/SEP7MJuFZb
+
+- **Tweet:** https://x.com/jarrodwatts/status/2007579355762045121
+- **Link:** https://x.com/jarrodwatts/status/2007579355762045121/video/1
+- **What:** Claude Code plugin providing real-time HUD display of session context usage, active tools, running subagents, and task progress tracking.
+
+## @quantscience_ - AI Hedge Fund with Specialized Analysts
+> His name is @virattt and he's doing something amazing. 
+>
+> He's built an AI hedge fund that has:
+>
+> 1. Market Data Analyst
+> 2. Sentiment Analyst
+> 3. Fundamentals Analyst
+> 4. Quant Analyst
+> 5. Risk Manager
+> 6. Portfolio Manager
+
+*Replying to @quantscience_:* This guy made an AI Hedge Fund... 
+
+Then open-sourced it for everyone to use. 
+
+This is the story. https://t.co/R65dGhou8y
+
+- **Tweet:** https://x.com/quantscience_/status/2007439126354702493
+- **Parent:** https://x.com/quantscience_/status/2007439123225686080
+- **What:** Open-source AI hedge fund project by @virattt featuring multiple specialized AI analysts for market analysis, sentiment tracking, fundamentals, quantitative modeling, risk management, and portfolio optimization.
+
 ## @nummanali - CC Mirror: Multi-Agent Orchestration
 > The Kraken has been Released
 >
@@ -59,7 +129,7 @@
 > Updating CC Mirror later today so that anyone can try this
 
 - **Tweet:** https://x.com/nummanali/status/2007768692659015877
-- **Link:** https://github.com/numman-ali/cc-mirror
+- **Link:** https://github.com/nummanali/cc-mirror
 - **Filed:** [cc-mirror.md](./knowledge/tools/cc-mirror.md)
 - **What:** GitHub repo for CC-MIRROR - creates isolated Claude Code variants with custom AI providers for multi-agent orchestration.
 
@@ -98,6 +168,7 @@
 - **Tweet:** https://x.com/kr0der/status/2007538273745539187
 - **Quoted:** https://x.com/thsottiaux/status/2006624682515247604
 - **Link:** https://github.com/steipete/agent-scripts
+- **Filed:** [agent-scripts.md](./knowledge/tools/agent-scripts.md)
 - **What:** Essential tips for using Codex effectively, including --yolo flag, setup from steipete's repo, different usage patterns vs Claude Code, planning techniques, and long-running task strategies.
 
 ## @TodayiLearrned - Shoulder Posture Correction
@@ -135,39 +206,6 @@
 
 - **Tweet:** https://x.com/yulintwt/status/2007407101275213971
 - **What:** Content about entrepreneurial strategies for finding valuable startup ideas at no cost.
-
-## @moreconfetti - Clawdbot AI Assistant
-> Update on Crawdad 🦞 (my AI Assistant running on @clawdbot by @steipete )
->
-> Tonight we built a full weekly meal planning system in Notion.
->
-> My wife and I take turns cooking, so we had Crawdad set up:
->
-> - Master meal plan template for all of 2026 (365 days)
-> - Shopping lists sorted by store and aisle (Kroger/Costco/Lowes)
-> - Weather forecast auto-updating on the meal plan list (helps me plan good nights for grilling, soup, etc)
-> - Our go-to recipes catalogued by chef
->
-> - ⁠It'll remind me in morning/evening digests if I need to plan dinner or grab groceries.
->
-> I imagine that this will save us at least an hour a week.
->
-> https://t.co/pNS2ceeUwL
-
-- **Tweet:** https://x.com/moreconfetti/status/2007616854689280196
-- **Link:** https://github.com/clawdbot/clawdbot
-- **Filed:** [clawdbot.md](./knowledge/tools/clawdbot.md)
-- **What:** Personal AI assistant (Crawdad) built on clawdbot framework with comprehensive meal planning system, automated shopping lists, weather integration, and recipe management.
-
-## @housecor - Advent of Claude Guide
-> Last month I enjoyed "Advent of Claude: 31 Days of Claude Code".
->
-> The author just published this single blog post with all the tips in one spot: https://t.co/b5QChuWrPh
-
-- **Tweet:** https://x.com/housecor/status/2007645358730686497
-- **Link:** https://adocomplete.com/advent-of-claude-2025/
-- **Filed:** [advent-of-claude-2025.md](./knowledge/articles/advent-of-claude-2025.md)
-- **What:** Complete compilation of 31 days of Claude Code tips and techniques in a single comprehensive guide covering shortcuts, agent patterns, and productivity workflows.
 
 ## @nummanali - The Kraken has been Released
 > The Kraken has been Released
@@ -283,7 +321,154 @@
 
 ---
 
+
+## @hayesdev_ - Claude Skills Setup Guide
+> This guy literally shows the fastest way to set up Claude's skills step by step
+
+- **Tweet:** https://x.com/hayesdev_/status/2007390743304999252
+- **What:** Video guide showing the fastest method to set up Claude Code skills with step-by-step instructions.
+
+## @nikunj - Claude Skills Discovery
+> If you use Claude heavily, this one simple trick will change your life and also help you get started with Skills..
+>
+> "Look at ALL my previous chats - figure out what kind of skills I can potentially make to make my workflows better and easier. For example, I can think of the X skill and the Y skill to automate these Z workflows. What else do you recommend?"
+>
+> It has now recommended 12 other skills that are things I repeat on a constant basis.
+>
+> Skills are WAY more accessible for regular folks since it's just a .md file and it's easy to tune with Claude.
+>
+> It also lives natively in the Claude Desktop app so easy to invoke vs. having to create fancy workflows.
+>
+> Try it and share what you find!
+
+- **Tweet:** https://x.com/nikunj/status/2007543585630200220
+- **What:** Technique for discovering personalized Claude skills by analyzing chat history, with tips on making skills accessible and easy to invoke.
+
+## @steipete - Clawdis Tool
+> Clawdis is hard to explain, but after seeing it for 5 min you'll be a believer.
+
+- **Tweet:** https://x.com/steipete/status/2007547366103232821
+- **Quoted:** https://x.com/pepicrft/status/2007511260825563418
+- **What:** Clawdis - a tool that replaces multiple apps, mentioned as hard to explain but highly convincing after a 5-minute demo.
+
+## @banteg - Agent Workflows Documentation
+> started documenting my agents workflows, starting from worktrees. will gradually expand on it. what else do you wish to know?
+
+- **Tweet:** https://x.com/banteg/status/2007410500859245029
+- **Link:** https://github.com/banteg/agents
+- **Filed:** [agents.md](./knowledge/tools/agents.md)
+- **What:** Documentation repository for AI agent workflows, starting with worktree patterns and expanding on agent orchestration practices.
+
 # Saturday, January 3, 2026
+
+## @irl_danB - OpenProse VM Programming Language
+> "Wow."
+>
+> the OpenProse VM is a new kind of computer
+>
+> try it in 30 seconds:
+>
+> https://t.co/uCWV6A3ocm
+>
+> install skill (no code, no dependencies) in Claude Code, Opencode, Codex
+>
+> restart to load skill
+>
+> `openprose boot`
+>
+> onboarding is built in, it should hold your hand from there
+
+> *Quoting @xpasky:* @irl_danB I tried it with the skill installed.
+>
+> It executed the VM perfectly. Wow.
+
+- **Tweet:** https://x.com/irl_danB/status/2007595082229395519
+- **Quoted:** https://x.com/xpasky/status/2007592282409623887
+- **Link:** https://www.prose.md/
+- **Filed:** [openprose.md](./knowledge/articles/openprose.md)
+- **What:** OpenProse - a new programming language for AI sessions as Turing-complete computers, with built-in onboarding and skill installation.
+
+## @nummanali - CC Mirror Release Announcement
+> Announcing the release of CC Mirror
+>
+> The best way to use @Zai_org (GLM 4.7) and @MiniMax__AI (M2.1) Coding Plans
+>
+> - Full Model Support
+> - All tools preconfigured
+> - Custom themes
+> - Isolated from CC
+> - Enhanced prompts
+>
+> Start now: npx cc-mirror https://t.co/K5qArk6TH1
+
+- **Tweet:** https://x.com/nummanali/status/2007586417094844517
+- **Link:** https://x.com/nummanali/status/2007586417094844517/photo/1
+- **What:** Release of CC Mirror tool for using GLM 4.7 and MiniMax AI coding plans in Claude Code with full model support and isolation.
+
+## @AlexFinn - Context Management in Claude Code
+> 🔶Load up your context
+>
+> CC's context management has gotten MASSIVE improvements the last few weeks
+>
+> It now compacts intelligently, allowing you to keep context for a LONG time
+>
+> Don't be afraid to load context by having CC review your architecture at the beginning of sessions
+
+> *Replying to @AlexFinn:* 🔶 Use Github early and often
+>
+> Once you connect CC to git, it gets access to your entire commit history
+>
+> Meaning it will know about EVERY change you've ever committed, making it SO much more powerful
+>
+> This will reduce hallucinations a ton. Connect CC to git right away
+
+- **Tweet:** https://x.com/AlexFinn/status/2007585397300441204
+- **Parent:** https://x.com/AlexFinn/status/2007585395551387992
+- **What:** Tips for better context management in Claude Code - load context early, connect to git for commit history access, and leverage intelligent context compaction.
+> All of the coolest Claude Code features written in a slick blog post from @adocomplete
+>
+> Even I didn't know all of these!
+>
+> Bookmark and read with some coffee
+
+> *Quoting @adocomplete:* I turned the Advent of Claude into a blog post where I could provide additional context, resources, and re-ordered the tips into a more logical order going from startup to advanced capabilities.
+
+- **Tweet:** https://x.com/nummanali/status/2007567741327184086
+- **Quoted:** https://x.com/adocomplete/status/2007518563356291573
+- **Link:** https://adocomplete.com/advent-of-claude-2025/
+- **Filed:** [advent-of-claude-2025.md](./knowledge/articles/advent-of-claude-2025.md)
+- **What:** Recommendation to read comprehensive Claude Code features guide by Ado Kukic, covering everything from shortcuts to advanced agent patterns.
+
+## @supermemory - Install MCP for OpenCode
+> Install MCP now supports @opencode
+>
+> 𝚋𝚞𝚗𝚡 𝚒𝚗𝚜𝚝𝚊𝚕𝚕-𝚖𝚌𝚙 𝚑𝚝𝚝𝚙𝚜://𝚖𝚌𝚙.𝚜𝚞𝚙𝚎𝚛𝚖𝚎𝚖𝚘𝚛𝚢.𝚊𝚒/𝚖𝚌𝚙 --𝚌𝚕𝚒𝚎𝚗𝚝 𝚘𝚙𝚎𝚗𝚌𝚘𝚍𝚎
+>
+> - handles auth across clients
+> - deals with the different config schemas (so you dont have to)
+>
+> https://t.co/h13CEtjdi6
+
+- **Tweet:** https://x.com/supermemory/status/2007565682754625805
+- **Link:** https://github.com/supermemoryai/install-mcp
+- **Filed:** [install-mcp.md](./knowledge/tools/install-mcp.md)
+- **What:** Install MCP tool now supports OpenCode client with automatic authentication handling and config schema management.
+
+## @banteg - Takopi v0.6.0 Interactive Onboarding
+> takopi v0.6.0 now has interactive onboarding
+>
+> takopi walks you through:
+> - creating a telegram bot
+> - detecting your chat id automatically
+> - picking your default agent
+>
+> no more manual config editing https://t.co/mo0RKLsSqn
+
+- **Tweet:** https://x.com/banteg/status/2007523410256244882
+- **Link:** https://x.com/banteg/status/2007523410256244882/video/1
+- **What:** Takopi v0.6.0 update with interactive onboarding for Telegram bot creation, automatic chat ID detection, and default agent selection.
+
+- **What:** Open-source AI hedge fund project by @virattt featuring specialized AI analysts for market data, sentiment, fundamentals, quantitative analysis, risk management, and portfolio optimization.
 
 ## @sockdrawermoney - Git-Native Ticket Tracker
 > @banteg Recommended https://t.co/i7nzDaPNN1
@@ -313,6 +498,22 @@
 - **Parent:** https://x.com/banteg/status/2007489213315297424
 - **Quoted:** https://x.com/joelreymont/status/2006419799501582767
 - **What:** Zed workflow using Dots (Beads replacement) and Banjo harness to manage Claude Code sessions with auto-nudge functionality for continuous operation.
+
+---
+
+# Friday, January 2, 2026
+
+## @captainsafia - Burrow v1.3.0 Secret Management
+> burrow v1.3.0 is out ✨
+>
+> Secrets now autoload per-directory (direnv-style), so the right values are always in scope and never committed.
+>
+> 🐰 : https://t.co/KCWLE63F2l https://t.co/dviHVP8vpm
+
+- **Tweet:** https://x.com/captainsafia/status/2007215212932350165
+- **Link:** https://github.com/captainsafia/burrow/releases/tag/v1.3.0
+- **Filed:** [burrow.md](./knowledge/tools/burrow.md)
+- **What:** Burrow v1.3.0 release with per-directory secret autoloading (direnv-style) to prevent accidental commits while keeping values in scope.
 
 ---
 
