@@ -1045,7 +1045,11 @@
 > 2026 is going to be amazing
 
 - **Tweet:** https://x.com/mikehostetler/status/2006556293507461316
+
 - **Media:** Video demonstration
+
+- **Filed:** [jido-2-0-agent-swarm.md](./knowledge/videos/jido-2-0-agent-swarm.md)
+
 - **What:** Jido 2.0 orchestrating 1,575 parallel agents to index an entire codebase in just 7 seconds. Demonstrates massive scalability for agent-based code analysis tasks.
 
 ---
