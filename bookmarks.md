@@ -319,14 +319,22 @@ This is the story. https://t.co/R65dGhou8y
 - **Filed:** [supermemory-mcp-integration.md](./knowledge/articles/supermemory-mcp-integration.md)
 - **What:** Link to documentation for integrating Supermemory MCP into coding agents like Claude Code for real-time documentation access.
 
----
 
+# Saturday, January 3, 2026
 
 ## @hayesdev_ - Claude Skills Setup Guide
 > This guy literally shows the fastest way to set up Claude's skills step by step
 
 - **Tweet:** https://x.com/hayesdev_/status/2007390743304999252
 - **What:** Video guide showing the fastest method to set up Claude Code skills with step-by-step instructions.
+
+## @banteg - Agent Workflows Documentation
+> started documenting my agents workflows, starting from worktrees. will gradually expand on it. what else do you wish to know?
+
+- **Tweet:** https://x.com/banteg/status/2007410500859245029
+- **Link:** https://github.com/banteg/agents
+- **Filed:** [agents.md](./knowledge/tools/agents.md)
+- **What:** Documentation repository for AI agent workflows, starting with worktree patterns and expanding on agent orchestration practices.
 
 ## @nikunj - Claude Skills Discovery
 > If you use Claude heavily, this one simple trick will change your life and also help you get started with Skills..
@@ -351,15 +359,6 @@ This is the story. https://t.co/R65dGhou8y
 - **Quoted:** https://x.com/pepicrft/status/2007511260825563418
 - **What:** Clawdis - a tool that replaces multiple apps, mentioned as hard to explain but highly convincing after a 5-minute demo.
 
-## @banteg - Agent Workflows Documentation
-> started documenting my agents workflows, starting from worktrees. will gradually expand on it. what else do you wish to know?
-
-- **Tweet:** https://x.com/banteg/status/2007410500859245029
-- **Link:** https://github.com/banteg/agents
-- **Filed:** [agents.md](./knowledge/tools/agents.md)
-- **What:** Documentation repository for AI agent workflows, starting with worktree patterns and expanding on agent orchestration practices.
-
-# Saturday, January 3, 2026
 
 ## @irl_danB - OpenProse VM Programming Language
 > "Wow."
