@@ -11,6 +11,6 @@
   "autoInvokeClaude": true,
   "claudeModel": "sonnet",
   "autoInvokeOpencode": true,
-  "opencodeModel": "opencode/grok-code",
+  "opencodeModel": "opencode/glm-4.7-free",
   "cliTool": "opencode"
 }
